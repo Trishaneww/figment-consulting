@@ -6,20 +6,27 @@ import { Menu, Phone, X } from "lucide-react";
 import { Button } from "./ui/button";
 import "../styles/global.scss";
 import { navItems } from "@/data";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <div className="flex w-[95%] lg:w-[60%] justify-between items-center navbar gap-8 px-4 text-black py-2 z-30 bg-[#FFFF] rounded-2xl mt-6 fixed">
+    <div className="flex w-full justify-between items-center navbar gap-8 px-4 lg:px-96 text-black py-2 z-80 pt-6 fixed overflow-hidden bg-black">
       <div className="flex gap-8 items-center w-full lg:w-1/3">
         <Link
           href="/"
           className={cn(
-            "relative dark:text-slate-50 items-center flex space-x-1 text-slate-950"
+            "relative dark:text-slate-50 items-center flex space-x-1 text-slate-50"
           )}
           aria-label="homepage link"
         >
+            <Image 
+                width={60}
+                height={60}
+                src="/assets/images/logo.png"
+                alt="figment studios logo"
+            />
           <p className="text-lg lg:text-xl font-extrabold">
-            Eeastline <span className="text-blue-500">Mechanical</span>
+           Figment Consulting
           </p>
         </Link>
       </div>
@@ -30,7 +37,7 @@ const Navbar = () => {
             href={item.href}
             key={idx}
             className={cn(
-              "relative dark:text-slate-50 items-center hidden lg:flex space-x-1 text-slate-950  text-base lg:text-lg"
+              "relative dark:text-slate-50 items-center hidden lg:flex space-x-1 text-slate-50 font-semibold text-base"
             )}
             aria-label="navigation link"
           >
@@ -42,7 +49,7 @@ const Navbar = () => {
       <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
         <Link
           href="tel:416-995-4979">
-          <Button className="h-[45px] w-[160px] text-base bg-blue-500"><Phone /> Call us now</Button>
+          <Button className="h-[45px] w-[160px] text-base border-[1px] border-gray-500 rounded-full text-blue-400">Get a free audit</Button>
         </Link>
       </div>
 
