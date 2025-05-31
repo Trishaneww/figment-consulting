@@ -1,0 +1,17 @@
+
+import Hero from '@/components/Hero'
+import Navbar from '@/components/Navbar'
+import React from 'react'
+
+
+
+const page = () => {
+  return (
+    <div className="flex flex-col bg-[#1A1A1A] text-slate-50 overflow-hidden">
+      <Navbar />
+        <Hero />
+    </div>
+  )
+}
+
+export default page
