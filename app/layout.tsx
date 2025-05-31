@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Host_Grotesk } from "next/font/google";
+import { Host_Grotesk, Montserrat } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
 
-const inter = Host_Grotesk({ weight: ["300", "400", "500", "600", "700", "800"], subsets: ["latin"] });
+const inter = Montserrat({ weight: ["300", "400", "500", "600", "700", "800"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Figment Studios ",

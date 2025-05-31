@@ -1,17 +1,22 @@
 export const navItems = [
     {
         id:1,
-        title: "services",
+        title: "Services",
         href: "/"
     },
      {
-        id:1,
-        title: "about",
+        id:2,
+        title: "Works",
         href: "/"
     },
      {
-        id:1,
-        title: "pricing",
+        id:3,
+        title: "Pricing",
+        href: "/"
+    },
+    {
+        id:4,
+        title: "Contact",
         href: "/"
     },
 ]
