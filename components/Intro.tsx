@@ -7,7 +7,7 @@ const Intro = () => {
     <div className="flex flex-col lg:flex-row px-4 lg:px-32 lg:gap-4 justify-center items-center mt-20 lg:mt-24">
       <div className="flex flex-col lg:w-1/3 gap-6 text-left">
         <p className="text-3xl lg:text-5xl font-semibold lg:w-[85%]">
-          Marketing Made Simple, Results Made Predictable
+          Your trusted partner in unlocking business potential
         </p>
         <p className="text-sm">
           Traditional marketing is expensive and unpredictable. We believe

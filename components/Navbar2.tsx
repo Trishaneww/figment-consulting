@@ -9,7 +9,7 @@ import { navItems } from "@/data";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Navbar = () => {
+const Navbar2 = () => {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -33,11 +33,11 @@ const Navbar = () => {
   return (
     <div
       className={`
-         flex w-full justify-between items-center navbar gap-8 px-4 lg:px-80 text-black py-6 z-80 fixed overflow-hidden
+         flex w-full justify-between items-center navbar gap-8 px-4 lg:px-80 text-black py-6 z-80 fixed 
         transition-all duration-300 ease-in-out
         ${
           visible
-            ? "opacity-100 translate-y-0 bg-[#181818]"
+            ? "opacity-100 translate-y-0 bg-slate-200"
             : "opacity-0 -translate-y-4"
         }
       `}
@@ -46,7 +46,7 @@ const Navbar = () => {
         <Link
           href="/"
           className={cn(
-            "relative dark:text-slate-50 items-center flex space-x-1 text-slate-50"
+            "relative  items-center flex space-x-1 text-slate-950"
           )}
           aria-label="homepage link"
         >
@@ -68,7 +68,7 @@ const Navbar = () => {
             href={item.href}
             key={idx}
             className={cn(
-              "relative dark:text-slate-50 items-center hidden lg:flex space-x-1 text-slate-50 font-semibold text-base"
+              "relative items-center hidden lg:flex space-x-1 text-slate-950 font-semibold text-base"
             )}
             aria-label="navigation link"
           >
@@ -79,7 +79,7 @@ const Navbar = () => {
 
       <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
         <Link href="tel:416-995-4979">
-          <Button className="font-semibold h-[45px] w-[160px] text-base border-[1px] border-gray-700 bg-black rounded-full text-white">
+          <Button className="font-semibold h-[45px] w-[160px] text-sm border-[1px] border-gray-700 bg-slate-950 shadow-slate-400 shadow-lg text-white">
             Get a free audit
           </Button>
         </Link>
@@ -125,4 +125,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar2;
