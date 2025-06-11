@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Host_Grotesk, Montserrat } from "next/font/google";
+import { Host_Grotesk, Montserrat, Noto_Sans_Deseret, Questrial } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
 
-const inter = Montserrat({ weight: ["300", "400", "500", "600", "700", "800"], subsets: ["latin"] });
+const inter = Questrial({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Figment Studios ",
+  title: "Figment Consulting",
   description:
     "We design and develop custom, high-performing websites tailored to help your business stand out and grow.",
   icons: {
-    icon: "/assets/icons/favicon.ico",
+    icon: "/assets/images/logo.png",
   },
 };
 

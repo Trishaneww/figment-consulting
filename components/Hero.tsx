@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-black/40 z-10" />
 
       <div className="relative z-30 flex flex-col items-center justify-center gap-4 px-4">
-        <div className="flex justify-center items-center gap-2 rounded-full border-[1px] border-gray-700 px-2 py-1">
+        <div className="flex justify-center items-center gap-2 rounded-full border-[1px] border-gray-700 px-2 py-1 text-base">
           <Image
             width={25}
             height={25}
@@ -38,7 +38,7 @@ const Hero = () => {
           growth.
         </p>
 
-        <Button className="border-[1px] border-white rounded-full bg-slate-100 text-black h-[48px] w-[170px] mt-6 font-semibold">
+        <Button className="border-[1px] border-white rounded-full bg-slate-100 text-black h-[48px] w-[180px] mt-6 text-base font-semibold">
           Get a Free Audit
         </Button>
       </div>

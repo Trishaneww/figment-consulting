@@ -2,16 +2,13 @@ import Image from "next/image";
 import styles from "@/styles/LogoCarousel.module.scss";
 
 const logos = [
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
-  "/assets/images/logo.png",
+  "/assets/images/logo3.png",
+  "/assets/images/logo3.png",
+  "/assets/images/logo3.png",
+  "/assets/images/logo3.png",
+  "/assets/images/logo3.png",
+  "/assets/images/logo3.png",
+  "/assets/images/logo3.png",
 ];
 
 export default function LogoCarousel() {
@@ -28,7 +25,7 @@ export default function LogoCarousel() {
         <div className={styles.track}>
           {repeated.map((logo, i) => (
             <div key={i} className={styles.logo}>
-              <Image src={logo} alt={`Logo ${i}`} width={100} height={100} />
+              <Image src={logo} alt={`Logo ${i}`} width={1000} height={1000} className="max-h-[100px]"/>
             </div>
           ))}
         </div>

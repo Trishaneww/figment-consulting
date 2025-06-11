@@ -3,6 +3,7 @@
   overflow: hidden;
   width: 60%;
   height: 120px;
+  background-color: white;
 }
 
 .carousel {
@@ -22,9 +23,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  margin-right: 30px;
-  margin-left: 30px; // Remove any margin
+  height: 100px;
+  width: 200px;
+  margin-right: 25px;
+  margin-left: 25px; // Remove any margin
   padding: 0 1rem; // Adjust as needed
 }
 
