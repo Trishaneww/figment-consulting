@@ -1,5 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import Footer2 from "@/components/Footer2";
 import Navbar2 from "@/components/Navbar2";
 import { BlogData } from "@/data";
 import { Calendar } from "lucide-react";
@@ -8,21 +9,21 @@ import React from "react";
 
 const Blog = () => {
   return (
-    <div className="flex flex-col items-center bg-slate-200">
+    <div className="flex flex-col items-center bg-[#FAFAFA]">
       <Navbar2 />
       <div className="flex flex-col gap-2 items-center justify-center text-center mt-44">
         <p className="font-semibold text-sm lg:text-base lg:w-[60%]">
           BLOG
         </p>
-        <p className="font-semibold text-3xl lg:text-6xl lg:w-[50%] mt-4">
+        <p className="font-semibold text-3xl lg:text-6xl lg:w-[60%] mt-4">
           Content about Framer, web design, templates, and online business.
         </p>
       </div>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-2 mt-12 lg:w-[70%] pb-32">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-2 mt-12 lg:w-[75%] pb-32">
         {BlogData.map((blog, idx) => (
           <div
-            className="flex flex-col border-[1px] border-gray-300 rounded-xl w-full h-[400px] max-w-[360px] md:max-w-[480px] overflow-hidden"
+            className="flex flex-col rounded-xl w-full h-[400px] max-w-[360px] md:max-w-[520px] overflow-hidden"
             key={idx}
           >
             <div className="relative overflow-hidden h-[550px] rounded-b-xl">
@@ -51,6 +52,7 @@ const Blog = () => {
         ))}
       </section>
       <Footer />
+      <Footer2 />
     </div>
   );
 };
