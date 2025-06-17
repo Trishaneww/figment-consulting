@@ -1,4 +1,6 @@
+import Faq from "@/components/Faq";
 import Footer from "@/components/Footer";
+import Footer2 from "@/components/Footer2";
 import Navbar2 from "@/components/Navbar2";
 import { Button } from "@/components/ui/button";
 import { pricing } from "@/data";
@@ -8,12 +10,10 @@ import React from "react";
 
 const Pricing = () => {
   return (
-    <div className="flex flex-col items-center bg-slate-200">
+    <div className="flex flex-col items-center bg-[#FAFAFA]">
       <Navbar2 />
       <div className="flex flex-col gap-2 items-center justify-center text-center mt-44">
-        <p className="font-semibold text-sm lg:text-base lg:w-[60%]">
-          BLOG
-        </p>
+        <p className="font-semibold text-sm lg:text-base lg:w-[60%]">BLOG</p>
         <p className="font-semibold text-3xl lg:text-6xl mt-4">
           Explore Our Pricing Plans.
         </p>
@@ -116,8 +116,10 @@ const Pricing = () => {
         ))}
       </div>
 
-     
+      <Faq />
+
       <Footer />
+      <Footer2 />
     </div>
   );
 };

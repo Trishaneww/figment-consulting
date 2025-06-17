@@ -17,6 +17,8 @@ import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import CTA1 from "@/components/CTA1";
 import BlogPosts from "@/components/BlogPosts";
+import Footer2 from "@/components/Footer2";
+import Book from "@/components/Book";
 
 const page = () => {
   const gallery = useRef(null);
@@ -49,7 +51,7 @@ const page = () => {
     };
   }, []);
   return (
-    <div className="flex flex-col items-center bg-white text-slate-950 overflow-hidden">
+    <div className="flex flex-col items-center bg-[#FAFAFA] text-slate-950 overflow-hidden">
       <Navbar />
       <Hero />
       <LogoCarousel />
@@ -63,9 +65,11 @@ const page = () => {
       <Pricing />
       <Steps />
       <Testimonials />
-      <BlogPosts />
+      <Book />
       <Faq />
+      <BlogPosts />
       <Footer />
+      <Footer2 />
     </div>
   );
 };

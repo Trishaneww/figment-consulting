@@ -51,7 +51,7 @@ const Pricing = () => {
                   <li className="flex items-center gap-2 text-lg" key={idx}>
                     <CircleCheck
                       size={20}
-                      className="min-w-[25px] max-w=[25px]"
+                      className="min-w-[25px] max-w-[25px]"
                     />
                     {feature.feature}
                   </li>
@@ -65,7 +65,7 @@ const Pricing = () => {
           </div>
         ))}
 
-        {pricing.slice(0, 1).map((option, idx) => (
+        {/* {pricing.slice(0, 1).map((option, idx) => (
           <div
             className="relative flex flex-col rounded-2xl bg-black gap-4 overflow-hidden w-[340px] lg:w-[370px] h-[800px]"
             key={idx}
@@ -97,7 +97,7 @@ const Pricing = () => {
                   <li className="flex items-center gap-2 text-lg" key={idx}>
                     <CircleCheck
                       size={20}
-                      className="min-w-[25px] max-w=[25px]"
+                      className="min-w-[25px] max-w-[25px]"
                     />
                     {feature.feature}
                   </li>
@@ -109,7 +109,7 @@ const Pricing = () => {
               </Button>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );

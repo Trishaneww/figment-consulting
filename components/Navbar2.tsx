@@ -37,7 +37,7 @@ const Navbar2 = () => {
         transition-all duration-300 ease-in-out
         ${
           visible
-            ? "opacity-100 translate-y-0 bg-slate-200"
+            ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4"
         }
       `}
