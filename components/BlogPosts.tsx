@@ -8,12 +8,12 @@ const BlogPosts = () => {
   return (
     <div className="flex flex-col items-center py-32 w-full px-6">
       <div className="flex flex-col gap-2 items-center justify-center text-center">
-        <p className="lg:w-[50%] mt-4 lg:text-lg font-semibold tracking-wide">BLOG</p>
+        <p className="lg:w-[50%] mt-4 lg:text-sm font-semibold tracking-wide">BLOG</p>
         <p className="font-semibold text-3xl lg:text-5xl">
           Latest from our blog
         </p>
       </div>
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-3 mt-12 lg:w-[75%]">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-3 mt-12 lg:w-[75%] z-20 bg-[#FAFAFA]">
         {BlogData.slice(0, 3).map((blog, idx) => (
           <div
             className="flex flex-col rounded-xl w-full h-[400px] max-w-[360px] md:max-w-[520px] overflow-hidden"

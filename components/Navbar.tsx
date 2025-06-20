@@ -33,11 +33,11 @@ const Navbar = () => {
   return (
     <div
       className={`
-         flex w-full justify-between items-center navbar gap-8 px-4 lg:px-80 text-black py-6 z-80 fixed overflow-hidden
+        flex w-full justify-between items-center navbar gap-8 px-4 lg:w-[68%] text-black py-6 z-80 fixed overflow-hidden
         transition-all duration-300 ease-in-out
         ${
           visible
-            ? "opacity-100 translate-y-0 bg-[#181818]"
+            ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-4"
         }
       `}
@@ -50,14 +50,14 @@ const Navbar = () => {
           )}
           aria-label="homepage link"
         >
-          <Image
+          {/* <Image
             width={60}
             height={60}
             src="/assets/images/logo.png"
             alt="figment studios logo"
-          />
+          /> */}
           <p className="text-lg lg:text-xl font-extrabold">
-            Figment Consulting
+            Wize Consulting
           </p>
         </Link>
       </div>
@@ -79,7 +79,7 @@ const Navbar = () => {
 
       <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
         <Link href="tel:416-995-4979">
-          <Button className="font-semibold h-[45px] w-[160px] text-base border-[1px] border-gray-700 bg-black rounded-full text-white">
+          <Button className="font-semibold h-[45px] w-[160px] text-base border-[1px] border-gray-700 bg-white rounded-xl text-black">
             Get a free audit
           </Button>
         </Link>

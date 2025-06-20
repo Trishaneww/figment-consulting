@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Host_Grotesk, Montserrat, Noto_Sans_Deseret, Questrial } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { cn } from "@/lib/utils";
 
-const inter = Questrial({ weight: ["400"], subsets: ["latin"] });
+const inter = Roboto_Flex({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Figment Consulting",

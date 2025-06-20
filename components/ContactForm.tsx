@@ -7,6 +7,7 @@ import { toast, Toaster } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
+import '../styles/global.scss'
 
 const ContactForm = () => {
   const [emailError, setEmailError] = useState("");
@@ -41,34 +42,34 @@ const ContactForm = () => {
     } catch (err) {}
   };
   return (
-    <div className="w-full flex flex-col items-center mt-32 lg:h-[100vh] px-6 z-30">
-      <section className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:w-[75%] mt-10 mb-20">
+    <div className="w-full flex flex-col items-center mt-32 lg:h-[100vh] px-6 z-30 bg-[#FAFAFA] mb-[26rem]">
+      <section className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:w-[68%] mt-10 mb-20">
         <div className="flex flex-col items-start justify-center gap-1">
-          <p className="text-3xl lg:text-7xl font-bold lg:w-[50%]">
-            Switch. Seamlessly.
+          <p className="text-3xl lg:text-7xl font-medium lg:w-[50%] secondary">
+            Switch. <span className="italic">Seamlessly.</span>
           </p>
-          <p className="text-xl lg:text-2xl font-semibold lg:w-[55%] mb-8 mt-2">
+          <p className="text-base lg:text-lg font-semibold lg:w-[65%] mb-8 mt-2">
             Running a business? Switching platforms takes time, but not with
             Framer. Give your team a head start with a high-quality site.
           </p>
 
           <div className="flex gap-2 items-center">
             <Rocket size={18} />
-            <p className="lg:text-lg">
+            <p className="">
               Tell us what you’re building and share your design
             </p>
           </div>
 
           <div className="flex gap-2 items-center">
             <Rocket size={18} />
-            <p className="lg:text-lg">
+            <p className="">
               Tell us what you’re building and share your design
             </p>
           </div>
 
           <div className="flex gap-2 items-center">
             <Rocket size={18} />
-            <p className="lg:text-lg">
+            <p className="">
               Tell us what you’re building and share your design
             </p>
           </div>
@@ -76,7 +77,7 @@ const ContactForm = () => {
 
         <form
           onSubmit={sendEmail}
-          className="w-full lg:w-[75%] flex flex-col gap-2 rounded-xl shadow-slate-400 shadow-lg px-4 lg:px-10 py-4 pt-6  bg-white text-black mt-6 lg:mt-0"
+          className="w-full lg:w-[80%] flex flex-col gap-2 rounded-xl shadow-slate-400 shadow-lg px-4 lg:px-10 py-4 pt-6  bg-white text-black mt-6 lg:mt-0"
         >
           <div className="flex flex-col items-start gap-2 mt-12">
             <Pencil size={36} />

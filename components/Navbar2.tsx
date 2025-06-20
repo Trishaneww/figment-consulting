@@ -50,14 +50,8 @@ const Navbar2 = () => {
           )}
           aria-label="homepage link"
         >
-          <Image
-            width={60}
-            height={60}
-            src="/assets/images/logo.png"
-            alt="figment studios logo"
-          />
           <p className="text-lg lg:text-xl font-extrabold">
-            Figment Consulting
+            Wize Consulting
           </p>
         </Link>
       </div>
