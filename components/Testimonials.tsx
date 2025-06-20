@@ -1,143 +1,132 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
-import { FaStar } from "react-icons/fa";
+import '../styles/global.scss'
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    position: "Marketing Director at Bloom Inc.",
     quote:
-      "Figment Studios truly understood our vision. The website exceeded expectations, and we saw a 30% increase in leads within the first month. Their work elevated our brand. The website is fast, visually stunning, and performs better on Google than ever before.",
+      "Figment Studios built us a stunning website that truly reflects our brand. The process was smooth, and the results were beyond our expectations.",
+    name: "Sarah T.",
+    title: "Marketing Director, Bloom Co.",
   },
   {
-    name: "Daniel Lee",
-    position: "Founder of Peak Climb Gym",
     quote:
-      "The dashboard they built is intuitive and beautiful. Our members love tracking their climbs, and engagement has skyrocketed. Their work elevated our brand. The website is fast, visually stunning, and performs better on Google than ever before.",
+      "From design to deployment, everything was handled with care and creativity. I'd absolutely recommend them to any business.",
+    name: "Jason L.",
+    title: "Founder, GearHub",
   },
   {
-    name: "Emily Carter",
-    position: "Owner at Carter & Co Renovations",
     quote:
-      "Trishane made the process seamless. I didn’t have to worry about a thing, and now I have a site I’m proud to show clients. Their work elevated our brand. The website is fast, visually stunning, and performs better on Google than ever before.",
-  },
-  {
-    name: "James Liu",
-    position: "CEO of Elevate Drone Media",
-    quote:
-      "Their work elevated our brand. The website is fast, visually stunning, and performs better on Google than ever before. Their work elevated our brand. The website is fast, visually stunning, and performs better on Google than ever before.",
+      "The level of professionalism and attention to detail was unmatched. Our online traffic and conversion rates have significantly improved.",
+    name: "Amira R.",
+    title: "CEO, Vital Nutrition",
   },
 ];
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [prevIndex, setPrevIndex] = useState(0);
-  const [isSliding, setIsSliding] = useState(false);
+  const [fade, setFade] = useState(true);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      slideTo((currentIndex + 1) % testimonials.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [currentIndex]);
-
-  const slideTo = (nextIndex: number) => {
-    if (nextIndex === currentIndex) return;
-    setPrevIndex(currentIndex);
-    setIsSliding(true);
+  const handleChange = (nextIndex: number) => {
+    setFade(false); // Start fade-out
     setTimeout(() => {
       setCurrentIndex(nextIndex);
-      setIsSliding(false);
-    }, 500); // match duration with transition
+      setFade(true); // Fade-in
+    }, 200); // Matches fade-out duration
   };
 
-  const direction =
-    prevIndex < currentIndex ||
-    (prevIndex === testimonials.length - 1 && currentIndex === 0)
-      ? "left"
-      : "right";
+  const next = () => {
+    handleChange((currentIndex + 1) % testimonials.length);
+  };
+
+  const prev = () => {
+    handleChange(
+      currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1
+    );
+  };
+
+  const { quote, name, title } = testimonials[currentIndex];
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-100 px-4">
-      <div className="flex flex-col gap-2 items-center justify-center text-center">
-        <p className="font-semibold text-3xl lg:text-5xl lg:w-[60%]">
-          Success Stories from Our Happy Clients
-        </p>
-      </div>
+    <div className="flex justify-center w-full text-center px-4 relative bg-black text-white py-48 z-20">
+      <div className="flex justify-between gap-32 lg:w-[72%]">
+        {/* <p className="text-lg italic text-gray-700">“{quote}”</p>
+        <div className="mt-6">
+          <p className="font-semibold text-gray-900">{name}</p>
+          <p className="text-sm text-gray-500">{title}</p>
+        </div> */}
 
-      <div className="relative w-full lg:w-[50%] overflow-hidden">
-        <div
-          className={`flex transition-transform duration-500 ease-in-out`}
-          style={{
-            transform: isSliding
-              ? direction === "left"
-                ? "translateX(-100%)"
-                : "translateX(100%)"
-              : "translateX(0%)",
-          }}
-        >
-          {/* Previous Testimonial */}
-          <div className="w-full flex-shrink-0 px-4 py-6">
-            <TestimonialContent testimonial={testimonials[prevIndex]} />
-          </div>
-
-          {/* Current Testimonial */}
-          <div className="w-full flex-shrink-0 px-4 py-6">
-            <TestimonialContent testimonial={testimonials[currentIndex]} />
-          </div>
-        </div>
-      </div>
-
-      {/* Navigation Dots */}
-      <div className="flex mt-6 space-x-2">
-        {testimonials.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => slideTo(index)}
-            className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-              index === currentIndex ? "bg-blue-500" : "bg-gray-400"
-            }`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function TestimonialContent({
-  testimonial,
-}: {
-  testimonial: (typeof testimonials)[0];
-}) {
-  return (
-    <div className="p-6 flex flex-col justify-center items-center">
-      <div className="flex items-center gap-1 text-yellow-400 mt-4">
-        {Array(5)
-          .fill(0)
-          .map((_, i) => (
-            <FaStar size={25} key={i} />
-          ))}
-      </div>
-
-      <p className="text-xl text-center font-semibold mt-4">
-        "{testimonial.quote}"
-      </p>
-
-      <div className="mt-8 flex gap-4 bg-white rounded-full px-2 pr-8 py-2 shadow-lg">
-        <Image
-          height={100}
-          width={100}
-          src="/assets/images/headshot.jpg"
-          alt="headshots"
-          className="rounded-full min-w-[60px] max-w-[60px] max-h-[60px] min-h-[60px]"
-        />
-
-        <div className="flex flex-col justify-center gap-1">
-          <p className="text-sm font-semibold text-gray-900">
-            {testimonial.name}
+        <div className="flex flex-col items-start gap-3 text-left lg:w-[25%] text-gray-400">
+          <p className="traacking-widest font-semibold text-sm">TESTIMONIALS</p>
+          <p>
+            We deliver data-driven and result-focused deliverables. Hear what
+            they say about us.
           </p>
-          <p className="text-xs text-gray-700 -mt-1">{testimonial.position}</p>
+
+          <section className="flex gap-2 items-center mt-6">
+            <div className="flex gap-2">
+              <button
+                onClick={prev}
+                className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition border-[1px] border-gray-400"
+              >
+                <ChevronLeft size={20} />
+              </button>
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={next}
+                className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition border-[1px] border-gray-400"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
+          </section>
+        </div>
+
+        <div
+          className={`flex flex-col justify-center items-start text-left px-6 lg:px-12 mt-6 lg:mt-0 lg:w-[98%] transition-opacity duration-500 ${
+            fade ? "opacity-100" : "opacity-0"
+          }`}
+        >
+          <p className="font-bold">Logepsum</p>
+          <p className="font-medium text-2xl lg:text-[2rem] mt-2 secondary">
+            "Mandala gave our brand new identity that truly resonates with our
+            audience. The rebrand not only elevated our presence but also helped
+            us secure investor confidence and funding!"
+          </p>
+          <section className="flex items-center gap-2 mt-4">
+            <Image
+              width={200}
+              height={200}
+              src="/assets/images/services2.avif"
+              alt="testimonial profile photo"
+              className="rounded-full h-[50px] w-[50px]"
+            />
+
+            <div className="flex flex-col items-start">
+              <p className="secondary">Graham I.</p>
+              <p>CEO @Bracer EV</p>
+            </div>
+          </section>
+
+          <ul className="hidden lg:flex justify-between lg:w-[60%] mt-16">
+            <li className="flex flex-col items-start">
+              <p className="text-2xl lg:text-4xl font-bold secondary">70%</p>
+              <p className="text-gray-400">Increase in Sales</p>
+            </li>
+
+            <li className="flex flex-col items-start">
+              <p className="text-2xl lg:text-4xl font-bold secondary">70%</p>
+              <p className="text-gray-400">Increase in Sales</p>
+            </li>
+
+            <li className="flex flex-col items-start">
+              <p className="text-2xl lg:text-4xl font-bold secondary">70%</p>
+              <p className="text-gray-400">Increase in Sales</p>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

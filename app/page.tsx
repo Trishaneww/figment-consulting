@@ -1,24 +1,20 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import LogoCarousel from "@/components/LogoCarousel";
 import Navbar from "@/components/Navbar";
-import Pricing from "@/components/Pricing";
-import PricingHeader from "@/components/PricingHeader";
 import React from "react";
 import Testimonials from "@/components/Testimonials";
-import { useTransform, useScroll, motion } from "framer-motion";
-import Steps from "@/components/Steps";
-import Faq from "@/components/Faq";
+import { useTransform, useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
+import Faq from "@/components/Faq";
 import Projects from "@/components/Projects";
-import Services from "@/components/Services";
-import CTA1 from "@/components/CTA1";
-import BlogPosts from "@/components/BlogPosts";
-import Footer2 from "@/components/Footer2";
 import Book from "@/components/Book";
+import BlogPreview from "@/components/BlogPreview";
+import PricingOptions from "@/components/Pricing";
+import Services from "@/components/Services";
+import Footer3 from "@/components/Footer3";
 
 const page = () => {
   const gallery = useRef(null);
@@ -56,20 +52,14 @@ const page = () => {
       <Hero />
       <LogoCarousel />
       <Intro />
-      <Services />
       <Projects />
-      {/* <Parallax /> */}
-      {/* <SelectedWorks /> */}
-      {/* <PricingHeader /> */}
-      <CTA1 />
-      <Pricing />
-      <Steps />
+      <Services />
       <Testimonials />
+      <PricingOptions />
       <Book />
       <Faq />
-      <BlogPosts />
-      <Footer />
-      <Footer2 />
+      <BlogPreview/>
+      <Footer3 />
     </div>
   );
 };

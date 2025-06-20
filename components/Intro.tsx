@@ -1,28 +1,62 @@
 import React from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
+import Link from "next/link";
+import "../styles/global.scss";
 
 const Intro = () => {
   return (
-    <div className="flex flex-col lg:flex-row px-4 lg:px-32 lg:gap-4 justify-center items-center mt-20 lg:mt-24">
-      <div className="flex flex-col lg:w-1/3 gap-6 text-left">
-        <p className="text-3xl lg:text-5xl font-semibold lg:w-[85%]">
-          Your trusted partner in unlocking business potential
-        </p>
-        <p className="text-sm">
-          Traditional marketing is expensive and unpredictable. We believe
-          businesses deserve consistent, expert marketing without high costs or
-          long-term contracts.
-        </p>
-        <Button className="h-[48px] w-[150px] rounded-full font-semibold">Get Started Now</Button>
+    <div className="flex flex-col items-center w-full py-32 z-20 bg-[#FAFAFA]">
+      <div className="w-[65%] h-[440px] relative overflow-hidden rounded-lg">
+        <Image
+          src="/assets/images/intro.avif"
+          alt="Sample"
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          priority
+        />
       </div>
-      <Image
-        width={700}
-        height={700}
-        src="/assets/images/intro.png"
-        alt="intro image"
-        className="mt-6 lg:mt-0"
-      />
+
+      <div className="flex flex-col lg:flex-row gap-12 justify-between w-[65%] mt-12">
+        <section className="flex flex-col gap-4 w-1/2">
+          <p className="text-3xl lg:text-[2.5rem] font-medium lg:w-[80%] secondary">
+            Grow <span className="italic">10x</span> Smarter, Better, Faster
+          </p>
+          <p className="text-base lg:w-[85%]">
+            With a decade of expertise, We crafts bold brands and high-impact
+            campaigns that get results. From to execution, we create with
+            purpose and scale with precision.
+          </p>
+          <Link href="tel:416-995-4979">
+            <Button className="font-semibold h-[45px] w-[160px] text-sm border-[1px] border-gray-700 bg-slate-950 shadow-slate-400 shadow-lg text-white mt-4">
+              Get a free audit
+            </Button>
+          </Link>
+        </section>
+
+        <section className="grid grid-cols-1 gap-4 lg:grid-cols-2 w-1/2">
+          <div className="w-full flex flex-col items-start gap-2 h-[150px]">
+            <p className="font-medium text-4xl lg:text-7xl secondary">100+</p>
+            <p>Brands Transformed</p>
+          </div>
+
+          <div className="w-full flex flex-col items-start gap-2 h-[150px]">
+            <p className="font-medium text-4xl lg:text-7xl secondary">100+</p>
+            <p>Brands Transformed</p>
+          </div>
+
+          <div className="w-full flex flex-col items-start gap-2 h-[150px]">
+            <p className="font-medium text-4xl lg:text-7xl secondary">100+</p>
+            <p>Brands Transformed</p>
+          </div>
+
+          <div className="w-full flex flex-col items-start gap-2 h-[150px]">
+            <p className="font-medium text-4xl lg:text-7xl secondary">100+</p>
+            <p>Brands Transformed</p>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
