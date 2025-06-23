@@ -6,7 +6,7 @@ import Footer3 from "@/components/Footer3";
 import Navbar2 from "@/components/Navbar2";
 import Image from "next/image";
 import React from "react";
-const caseStudies: number[] = [1, 2, 3, 4, 5, 6];
+import { casestudies } from "@/data";
 
 const CaseStudies = () => {
   const gallery = useRef(null);
@@ -57,7 +57,7 @@ const CaseStudies = () => {
           </div>
 
           <section className="grid grid-cols-1 lg:grid-cols-2 lg:w-[68%] lg:min-w-[1000px] gap-8 mt-12">
-            {caseStudies.map((idx) => (
+            {casestudies.map((casestudy, idx) => (
               <div
                 className="flex flex-col gap-2 rounded-2xl shadow-xl overflow-hidden bg-[#FAFAFA] lg:h-[700px]"
                 key={idx}
@@ -66,7 +66,7 @@ const CaseStudies = () => {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/images/services1.avif"
+                    src={casestudy.src}
                     alt="service image"
                     className="hover:scale-110 duration-500 transition-transform h-full w-full z-10"
                   />

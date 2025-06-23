@@ -115,25 +115,186 @@ export const projects = [
 
 export const faqData = [
   {
-    item: "What’s your typical project timeline?",
+    item: "I am already selling online. How can you help me grow?",
     content:
-      "The timeline depends on the project’s scope and complexity. Branding and UI/UX projects usually take 2–6 weeks, while Framer website development can range from 1–4 weeks. I’ll provide a detailed timeline after the project brief",
+      "We offer growth audits and strategic consulting to identify untapped opportunities across your current channels. Whether it’s optimizing your Amazon listings, improving your website's conversion rate, or expanding into new marketplaces, our strategies are tailored to scale your store profitably.",
   },
   {
-    item: "What’s your typical project timeline?",
+    item: "Can you build a custom eCommerce website for my brand?",
     content:
-      "The timeline depends on the project’s scope and complexity. Branding and UI/UX projects usually take 2–6 weeks, while Framer website development can range from 1–4 weeks. I’ll provide a detailed timeline after the project brief",
+      "Yes! We specialize in designing and developing fully custom eCommerce websites tailored to your brand’s goals. Unlike template-based solutions, our custom code approach ensures fast performance, scalability, and seamless user experiences that convert visitors into customers.",
   },
   {
-    item: "What’s your typical project timeline?",
+    item: "What platforms do you support besides Amazon?",
     content:
-      "The timeline depends on the project’s scope and complexity. Branding and UI/UX projects usually take 2–6 weeks, while Framer website development can range from 1–4 weeks. I’ll provide a detailed timeline after the project brief",
+      "In addition to Amazon, we help businesses sell on Shopify, WooCommerce, Walmart Marketplace, eBay, and more. We’ll guide you in choosing the best platforms for your product and build an omni-channel strategy to maximize your reach and sales.",
   },
   {
-    item: "What’s your typical project timeline?",
+    item: "Do you run ads for online stores?",
     content:
-      "The timeline depends on the project’s scope and complexity. Branding and UI/UX projects usually take 2–6 weeks, while Framer website development can range from 1–4 weeks. I’ll provide a detailed timeline after the project brief",
+      "Absolutely. We manage paid advertising campaigns on both Google Ads and Amazon Ads. We focus on ROI-driven strategies including keyword targeting, retargeting, product ad optimization, and A/B testing to ensure you're getting the most from your ad spend.",
+  },
+    {
+    item: "What size of business do you work with?",
+    content:
+      "We work with startups, small-to-medium-sized businesses, and growing eCommerce brands. Whether you're launching your first product or managing thousands of SKUs, we provide flexible consulting and technical solutions to match your scale and needs.",
   },
 ];
 
-export const BlogData = [{}, {}, {}, {}, {}, {}];
+export const BlogData = [
+  {
+    src: "/assets/images/services4.webp"
+  }, 
+  {
+    src: "/assets/images/services3.avif"
+  }, 
+  {
+    src: "/assets/images/services1.avif"
+  }, 
+  {
+    src: "/assets/images/services4.webp"
+  }, 
+  {
+    src: "/assets/images/services3.avif"
+  }, 
+  {
+    src: "/assets/images/services1.avif"
+  }, 
+];
+
+export const casestudies = [
+   {
+    src: "/assets/images/services4.webp"
+  }, 
+  {
+    src: "/assets/images/services3.avif"
+  }, 
+  {
+    src: "/assets/images/services1.avif"
+  }, 
+  {
+    src: "/assets/images/services4.webp"
+  }, 
+  {
+    src: "/assets/images/services3.avif"
+  }, 
+  {
+    src: "/assets/images/services1.avif"
+  }, 
+]
+
+
+export interface CategoryValues {
+  [subcategory: string]: string;
+}
+
+export interface PricingOption {
+  name: string;
+  values: {
+    publish: CategoryValues;
+    collaboration: CategoryValues;
+    features: CategoryValues;
+    ai: CategoryValues;
+    analytics: CategoryValues;
+    marketing: CategoryValues;
+  };
+}
+
+export const pricingOptions: PricingOption[] = [
+  {
+    name: "Starter",
+    values: {
+      publish: {
+        "pages": "hi",
+        "Custom Domain": "No",
+      },
+      collaboration: {
+        "Team Members": "1",
+        "Permissions": "No",
+        "Comments": "No",
+        "Live Editing": "No",
+      },
+      features: {
+        "Page Limit": "5",
+        "Forms": "No",
+        "CMS": "No",
+      },
+      ai: {
+        "Text Generator": "No",
+        "Image AI": "No",
+      },
+      analytics: {
+        "Dashboard": "Basic",
+        "Export Reports": "No",
+      },
+      marketing: {
+        "Email Integration": "No",
+        "Social Media": "No",
+      },
+    },
+  },
+  {
+    name: "Pro",
+    values: {
+      publish: {
+        "pages": "pages",
+        "Custom Domain": "Yes",
+      },
+      collaboration: {
+        "Team Members": "5",
+        "Permissions": "Yes",
+        "Comments": "Yes",
+        "Live Editing": "Yes",
+      },
+      features: {
+        "Page Limit": "Unlimited",
+        "Forms": "Yes",
+        "CMS": "Basic",
+      },
+      ai: {
+        "Text Generator": "Yes",
+        "Image AI": "No",
+      },
+      analytics: {
+        "Dashboard": "Full",
+        "Export Reports": "Yes",
+      },
+      marketing: {
+        "Email Integration": "Yes",
+        "Social Media": "Scheduled Posts",
+      },
+    },
+  },
+  {
+    name: "Enterprise",
+    values: {
+      publish: {
+        "pages": "pages",
+        "Custom Domain": "Yes",
+      },
+      collaboration: {
+        "Team Members": "Unlimited",
+        "Permissions": "Advanced",
+        "Comments": "Yes",
+        "Live Editing": "Yes",
+      },
+      features: {
+        "Page Limit": "Unlimited",
+        "Forms": "Advanced",
+        "CMS": "Full Access",
+      },
+      ai: {
+        "Text Generator": "Advanced",
+        "Image AI": "Yes",
+      },
+      analytics: {
+        "Dashboard": "Custom",
+        "Export Reports": "Automated",
+      },
+      marketing: {
+        "Email Integration": "Advanced",
+        "Social Media": "Omnichannel",
+      },
+    },
+  },
+];

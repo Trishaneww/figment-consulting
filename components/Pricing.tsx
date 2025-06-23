@@ -1,15 +1,16 @@
 import { pricing } from "@/data";
 import { Check, CircleCheck } from "lucide-react";
-import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
 import "../styles/global.scss";
+import { Button } from "./ui/button";
 
 const PricingOptions = () => {
   return (
-    <div className="flex flex-col gap-2 justify-center items-center w-full py-32 px-6 z-20 bg-[#FAFAFA]">
+    <div className="flex flex-col gap-2 justify-center items-center w-full py-14 lg:py-32 px-6 z-20 bg-[#FAFAFA]">
       <div className="flex flex-col gap-2 items-center justify-center text-center">
-        <p className="tracking-widest text-gray-500 font-semibold text-sm">PRICING</p>
+        <p className="tracking-widest text-gray-500 font-semibold text-sm">
+          PRICING
+        </p>
         <p className="font-medium text-3xl lg:text-[2.5rem] secondary">
           Flexible plans. Scalable <span className="italic">growth.</span>
         </p>

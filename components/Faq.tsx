@@ -10,7 +10,7 @@ import '../styles/global.scss'
 
 const Faq = () => {
   return (
-    <div className="flex flex-col justify-center items-center scroll-smooth py-32 px-6 gap-6 w-full bg-gray-100 z-20">
+    <div className="flex flex-col justify-center items-center scroll-smooth py-14 lg:py-32 px-6 gap-6 w-full bg-gray-100 z-20">
       <section className="flex flex-col items-center justify-center gap-2 text-center xl:text-left p-2">
         <h1 className="text-3xl lg:text-[2.5rem] font-medium text-center secondary">
           Questions?<span className="italic"> Answered</span>
@@ -18,7 +18,7 @@ const Faq = () => {
         {/* <Button className="h-[45px] w-[140px] rounded-lg text-base shadow-slate-400 shadow-lg mt-8">Email us</Button> */}
       </section>
 
-      <div className="flex flex-col justify-center items-center gap-6 text-slate-950 text-base md:text-lg lg:text-xl px-2 rounded-lg w-full">
+      <div className="flex flex-col justify-center items-center gap-6 text-slate-950 text-base md:text-lg lg:text-xl rounded-lg w-full">
         <Accordion
           type="single"
           collapsible
@@ -27,7 +27,7 @@ const Faq = () => {
           {faqData.map((accordion: any, idx: number) => (
             <AccordionItem
               value={`item-${idx}`}
-              className="py-2 pb-4 px-4 rounded-2xl border-b-[1px] border-gray-300"
+              className="py-2 pb-4 rounded-2xl border-b-[1px] border-gray-300"
               key={idx}
             >
               <AccordionTrigger className="text-base md:text-lg text-left">

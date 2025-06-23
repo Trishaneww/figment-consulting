@@ -1,6 +1,5 @@
 import BlogPosts from "@/components/BlogPosts";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import Footer3 from "@/components/Footer3";
 import Navbar2 from "@/components/Navbar2";
 import { Calendar, Instagram } from "lucide-react";
 import Image from "next/image";
@@ -65,7 +64,7 @@ const Article1 = () => {
 
       <BlogPosts />
 
-      <Footer />
+      <Footer3 />
     </div>
   );
 };

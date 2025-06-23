@@ -77,7 +77,7 @@ const ContactForm = () => {
 
         <form
           onSubmit={sendEmail}
-          className="w-full lg:w-[80%] flex flex-col gap-2 rounded-xl shadow-slate-400 shadow-lg px-4 lg:px-10 py-4 pt-6  bg-white text-black mt-6 lg:mt-0"
+          className="w-full lg:w-[80%] flex flex-col gap-2 rounded-xl shadow-lg px-4 lg:px-10 py-4 pt-6  bg-white text-black mt-6 lg:mt-0"
         >
           <div className="flex flex-col items-start gap-2 mt-12">
             <Pencil size={36} />
