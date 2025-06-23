@@ -8,6 +8,14 @@ import "../styles/global.scss";
 import { navItems } from "@/data";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "./ui/navigation-menu";
 
 const Navbar2 = () => {
   const [visible, setVisible] = useState(true);
@@ -33,30 +41,22 @@ const Navbar2 = () => {
   return (
     <div
       className={`
-         flex w-full justify-between items-center navbar gap-8 px-4 lg:px-80 text-black py-6 z-80 fixed 
+         flex w-full justify-between items-center navbar gap-8 px-4 lg:w-[75%] text-black py-6 z-80 fixed 
         transition-all duration-300 ease-in-out
-        ${
-          visible
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 -translate-y-4"
-        }
+        ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}
       `}
     >
       <div className="flex gap-8 items-center w-full lg:w-1/3">
         <Link
           href="/"
-          className={cn(
-            "relative  items-center flex space-x-1 text-slate-950"
-          )}
+          className={cn("relative  items-center flex space-x-1 text-slate-950")}
           aria-label="homepage link"
         >
-          <p className="text-lg lg:text-xl font-extrabold">
-            Wize Consulting
-          </p>
+          <p className="text-lg lg:text-xl font-extrabold">Wize Consulting</p>
         </Link>
       </div>
 
-      <div className="hidden lg:flex justify-center items-center gap-6 w-1/3">
+      <div className="hidden lg:flex justify-center items-center gap-6 w-[55%]">
         {navItems.map((item, idx) => (
           <Link
             href={item.href}
@@ -69,6 +69,24 @@ const Navbar2 = () => {
             {item.title}
           </Link>
         ))}
+        {/* <NavigationMenu className="bg-transparent">
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger
+                className={cn(
+                  "relative items-center hidden lg:flex space-x-1 text-slate-950 font-semibold text-base"
+                )}
+                aria-label="navigation link"
+              >
+                Item One
+              </NavigationMenuTrigger>
+              <NavigationMenuContent className="bg-transparent">
+                <NavigationMenuLink>Link</NavigationMenuLink>
+                <NavigationMenuLink>Link</NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu> */}
       </div>
 
       <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">

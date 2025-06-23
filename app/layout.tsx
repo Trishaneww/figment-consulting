@@ -7,12 +7,9 @@ import { cn } from "@/lib/utils";
 const inter = Roboto_Flex({ weight: ["400"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Figment Consulting",
+  title: "Wize Consulting",
   description:
     "We design and develop custom, high-performing websites tailored to help your business stand out and grow.",
-  icons: {
-    icon: "/assets/images/logo.png",
-  },
 };
 
 export default function RootLayout({

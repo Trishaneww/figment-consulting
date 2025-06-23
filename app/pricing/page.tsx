@@ -5,9 +5,10 @@ import Lenis from "@studio-freight/lenis";
 import Faq from "@/components/Faq";
 import Footer3 from "@/components/Footer3";
 import Navbar2 from "@/components/Navbar2";
-import PricingOptions from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import React from "react";
+import PricingOptions2 from "@/components/pricing/Pricing2";
+import PricingChart from "@/components/pricing/PricingChart";
 
 const Pricing = () => {
   const gallery = useRef(null);
@@ -43,7 +44,8 @@ const Pricing = () => {
     <div className="flex flex-col items-center bg-[#FAFAFA]">
       <Navbar2 />
       <div className="mt-20"></div>
-      <PricingOptions />
+      <PricingOptions2 />
+      <PricingChart />
       <Testimonials />
       <Faq />
       <div className="mb-[26rem]"></div>

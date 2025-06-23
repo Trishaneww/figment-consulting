@@ -4,7 +4,7 @@ import '../styles/global.scss';
 
 const Projects = () => {
   return (
-    <div className="flex flex-col items-center px-6 py-32 bg-gray-100 w-full z-20">
+    <div className="flex flex-col items-center px-6 py-14 lg:py-32 bg-gray-100 w-full z-20">
       <div className="lg:w-[68%] flex flex-col gap-2 items-start justify-center text-left">
         <p className="font-semibold tracking-widest text-sm">
           CASE STUDIES

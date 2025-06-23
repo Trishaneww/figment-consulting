@@ -3,7 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import LogoCarousel from "@/components/LogoCarousel";
-import Navbar from "@/components/Navbar";
 import React from "react";
 import Testimonials from "@/components/Testimonials";
 import { useTransform, useScroll } from "framer-motion";
@@ -12,9 +11,11 @@ import Faq from "@/components/Faq";
 import Projects from "@/components/Projects";
 import Book from "@/components/Book";
 import BlogPreview from "@/components/BlogPreview";
-import PricingOptions from "@/components/Pricing";
 import Services from "@/components/Services";
 import Footer3 from "@/components/Footer3";
+import PricingOptions from "@/components/Pricing";
+import Navbar2 from "@/components/Navbar2";
+import Logos from "@/components/Logos";
 
 const page = () => {
   const gallery = useRef(null);
@@ -48,9 +49,9 @@ const page = () => {
   }, []);
   return (
     <div className="flex flex-col items-center bg-[#FAFAFA] text-slate-950 overflow-hidden">
-      <Navbar />
+      <Navbar2 />
       <Hero />
-      <LogoCarousel />
+      <Logos />
       <Intro />
       <Projects />
       <Services />
@@ -58,7 +59,7 @@ const page = () => {
       <PricingOptions />
       <Book />
       <Faq />
-      <BlogPreview/>
+      <BlogPreview />
       <Footer3 />
     </div>
   );
