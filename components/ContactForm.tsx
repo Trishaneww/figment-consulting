@@ -1,5 +1,5 @@
 "use client";
-import { Mail, Pencil, Rocket } from "lucide-react";
+import { ChartNoAxesColumn, ChartNoAxesColumnIncreasing, Laptop, Mail, Pencil, Rocket } from "lucide-react";
 import React from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -46,54 +46,52 @@ const ContactForm = () => {
       <section className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:w-[68%] mt-10 mb-20">
         <div className="flex flex-col items-start justify-center gap-1">
           <p className="text-3xl lg:text-7xl font-medium lg:w-[50%] secondary">
-            Switch. <span className="italic">Seamlessly.</span>
+            Scale <span className="italic">Smarter</span>
           </p>
-          <p className="text-base lg:text-lg font-semibold lg:w-[65%] mb-8 mt-2">
-            Running a business? Switching platforms takes time, but not with
-            Framer. Give your team a head start with a high-quality site.
+          <p className="text-base lg:text-lg font-semibold lg:w-[65%] mb-8 mt-4">
+            Running an online store? Growing across platforms takes time unless you’re working with Wize. Get expert help launching, optimizing, and scaling without the usual delays.
           </p>
 
-          <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center">
             <Rocket size={18} />
             <p className="">
-              Tell us what you’re building and share your design
+              Share your goals—we’ll build a custom growth plan for your brand
             </p>
           </div>
 
           <div className="flex gap-2 items-center">
-            <Rocket size={18} />
+            <ChartNoAxesColumnIncreasing size={18} />
             <p className="">
-              Tell us what you’re building and share your design
+              Grow on Amazon with optimized listings, SEO, and ad campaigns
             </p>
           </div>
 
           <div className="flex gap-2 items-center">
-            <Rocket size={18} />
+            <Laptop size={18} />
             <p className="">
-              Tell us what you’re building and share your design
+              Launch high-converting eCommerce sites built for speed and scale
             </p>
           </div>
         </div>
 
         <form
           onSubmit={sendEmail}
-          className="w-full lg:w-[80%] flex flex-col gap-2 rounded-xl shadow-lg px-4 lg:px-10 py-4 pt-6  bg-white text-black mt-6 lg:mt-0"
+          className="w-full lg:w-[95%] flex flex-col gap-2 rounded-xl shadow-lg px-4 lg:px-10 py-4 pt-6  bg-white text-black mt-6 lg:mt-0"
         >
           <div className="flex flex-col items-start gap-2 mt-12">
             <Pencil size={36} />
-            <p className="lg:text-2xl font-medium lg:w-[80%]">
-              Brief us Available to new and existing teams on an active Scale
-              plan, billed yearly at $200/month.
+            <p className="lg:text-2xl lg:w-[80%]">
+              <span className="font-semibold">Brief</span> us about your store, goals, or challenges, we’ll review your needs and get back to you with a clear path to scale
             </p>
           </div>
           {/* <Mail className="text-blue-500" size={40} /> */}
           <div className="flex flex-col gap-4 items-end mt-4">
             <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full gap-2 lg:gap-4">
               <div className="flex flex-col items-start gap-1 w-full">
-                <p>Full Name</p>
+                <p>Name</p>
                 <Input
                   type="text"
-                  placeholder="Jacob Johns"
+                  placeholder="Name"
                   name="full_name"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
@@ -102,8 +100,8 @@ const ContactForm = () => {
               <div className="flex flex-col items-start gap-1 w-full">
                 <p>Email</p>
                 <Input
-                  type="text"
-                  placeholder="johndoe@gmail.com"
+                  type="email"
+                  placeholder="Email"
                   name="email"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
@@ -111,20 +109,20 @@ const ContactForm = () => {
             </div>
             <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full gap-2 lg:gap-4">
               <div className="flex flex-col items-start gap-1 w-full">
-                <p>Full Name</p>
+                <p>Company</p>
                 <Input
                   type="text"
-                  placeholder="Jacob Johns"
+                  placeholder="Company"
                   name="full_name"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
               </div>
 
               <div className="flex flex-col items-start gap-1 w-full">
-                <p>Email</p>
+                <p>Domain</p>
                 <Input
                   type="text"
-                  placeholder="johndoe@gmail.com"
+                  placeholder="https://"
                   name="email"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
@@ -133,27 +131,27 @@ const ContactForm = () => {
             <div className="flex flex-col items-start gap-1 w-full">
               <p>Message</p>
               <Textarea
-                placeholder="Your message"
+                placeholder="Launching a new ecommerce store, exploring new sales channels via Amazon & Temu"
                 name="website"
                 className="w-full h-[100px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
               />
             </div>
                  <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full gap-2 lg:gap-4">
               <div className="flex flex-col items-start gap-1 w-full">
-                <p>Full Name</p>
+                <p>Amazon Store</p>
                 <Input
                   type="text"
-                  placeholder="Jacob Johns"
+                  placeholder="Amazon Store"
                   name="full_name"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
               </div>
 
               <div className="flex flex-col items-start gap-1 w-full">
-                <p>Email</p>
+                <p>Industry</p>
                 <Input
                   type="text"
-                  placeholder="johndoe@gmail.com"
+                  placeholder="Industry"
                   name="email"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />

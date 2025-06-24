@@ -16,6 +16,8 @@ import Footer3 from "@/components/Footer3";
 import PricingOptions from "@/components/Pricing";
 import Navbar2 from "@/components/Navbar2";
 import Logos from "@/components/Logos";
+import Comparison from "@/components/Comparison";
+import Process from "@/components/Process";
 
 const page = () => {
   const gallery = useRef(null);
@@ -55,7 +57,9 @@ const page = () => {
       <Intro />
       <Projects />
       <Services />
+      <Comparison />
       <Testimonials />
+      <Process />
       <PricingOptions />
       <Book />
       <Faq />

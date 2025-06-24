@@ -9,10 +9,10 @@ const Book = () => {
           BOOK A FREE 30 MINUTE CONSULTATION
         </p>
         <p className="font-medium text-3xl lg:text-[2.5rem] secondary">
-          Flexible plans. Scalable <span className="italic">growth.</span>
+          Unlock your store’s <span className="italic">potential </span>
         </p>
         <p className="">
-          From launch to scale, we’ve got you covered at every stage.
+          Book a free strategy call and start scaling wizer today.
         </p>
       </div>
       {/* <section className="flex flex-col gap-2">

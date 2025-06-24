@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useEffect, useRef, useState } from "react";
 import { useTransform, useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
@@ -6,7 +6,92 @@ import Footer3 from "@/components/Footer3";
 import Navbar2 from "@/components/Navbar2";
 import Image from "next/image";
 import React from "react";
-import { casestudies } from "@/data";
+
+const caseStudies = [
+  {
+    quote:
+      "EV Breakers triples monthly revenue on Amazon after SEO & PPC overhaul",
+    stats: [
+      {
+        statistic: "$75,000",
+        title: "Monthly Amazon revenue",
+      },
+      {
+        statistic: "42%",
+        title: "Decrease in Amazon ad cost-per-click",
+      },
+      {
+        statistic: "3×",
+        title: "Increase in product listing impressions",
+      },
+    ],
+    services: [
+      "Amazon Consulting",
+      "Amazon Ads Management",
+    ],
+    src: "/assets/images/services2.avif",
+  },
+  {
+    quote:
+      "YA Solutions scales client acquisition through web upgrades and ad strategy",
+    stats: [
+      {
+        statistic: "2.8×",
+        title: "More leads from redesigned landing pages",
+      },
+      {
+        statistic: "60%",
+        title: "Boost in Google Ads click-through rate",
+      },
+      {
+        statistic: "40%",
+        title: "Faster website load time",
+      },
+    ],
+    services: ["Custom Web Development", "Google Ads Management"],
+    src: "/assets/images/services1.avif",
+  },
+  {
+    quote:
+      "Glowify boosts DTC sales with custom Shopify store and Amazon launch",
+    stats: [
+      {
+        statistic: "55%",
+        title: "Increase in repeat customer purchases",
+      },
+      {
+        statistic: "4.5×",
+        title: "Growth in total online sales",
+      },
+      {
+        statistic: "3",
+        title: "New sales channels launched",
+      },
+    ],
+    services: ["Custom eCommerce Development", "Conversion Rate Optimization"],
+    src: "/assets/images/services3.avif",
+  },
+   {
+    quote:
+      "Glowify boosts DTC sales with custom Shopify store and Amazon launch",
+    stats: [
+      {
+        statistic: "55%",
+        title: "Increase in repeat customer purchases",
+      },
+      {
+        statistic: "4.5×",
+        title: "Growth in total online sales",
+      },
+      {
+        statistic: "3",
+        title: "New sales channels launched",
+      },
+    ],
+    services: ["Custom eCommerce Development", "Conversion Rate Optimization"],
+    src: "/assets/images/services4.webp",
+  },
+];
 
 const CaseStudies = () => {
   const gallery = useRef(null);
@@ -57,12 +142,12 @@ const CaseStudies = () => {
           </div>
 
           <section className="grid grid-cols-1 lg:grid-cols-2 lg:w-[68%] lg:min-w-[1000px] gap-8 mt-12">
-            {casestudies.map((casestudy, idx) => (
+            {caseStudies.map((casestudy, idx) => (
               <div
-                className="flex flex-col gap-2 rounded-2xl shadow-xl overflow-hidden bg-[#FAFAFA] lg:h-[700px]"
+                className="flex flex-col gap-2 rounded-2xl shadow-xl overflow-hidden bg-[#FAFAFA]"
                 key={idx}
               >
-                <div className="relative flex overflow-hidden lg:h-[480px]">
+                <div className="relative flex overflow-hidden lg:h-[350px]">
                   <Image
                     width={1000}
                     height={1000}
@@ -72,42 +157,47 @@ const CaseStudies = () => {
                   />
                 </div>
 
-                <div className="flex flex-col justify-center px-6 lg:px-8 mt-6">
+                <div className="flex flex-col  px-6 lg:px-8 mt-6 lg:h-[380px]">
                   <p className="font-bold">Logepsum</p>
                   <p className="font-medium text-2xl lg:text-3xl mt-2 secondary">
-                    Nuvé’s rebrand driving 70% sales growth in just 2 years
+                    {casestudy.quote}
                   </p>
 
-                  <ul className="hidden lg:flex justify-between w-[80%] mt-8">
-                    <li className="flex flex-col items-start gap-1">
+                  <ul className="hidden lg:flex justify-between w-[94%] mt-8 gap-2">
+                    <li className="flex flex-col items-start gap-2 lg:w-1/3">
                       <p className="text-2xl lg:text-3xl secondary font-semibold">
-                        70%
+                        {casestudy.stats[0].statistic}
                       </p>
-                      <p className="text-gray-500">Increase in Sales</p>
+                      <p className="text-gray-500 text-sm mt-2 lg-[80%]">
+                        {casestudy.stats[0].title}
+                      </p>
                     </li>
 
-                    <li className="flex flex-col items-start gap-1">
+                    <li className="flex flex-col items-start gap-2 lg:w-1/3">
                       <p className="text-2xl lg:text-3xl secondary font-semibold">
-                        70%
+                        {casestudy.stats[1].statistic}
                       </p>
-                      <p className="text-gray-500">Increase in Sales</p>
+                      <p className="text-gray-500 text-sm mt-2 lg-[80%]">
+                        {casestudy.stats[0].title}
+                      </p>
                     </li>
 
-                    <li className="flex flex-col items-start gap-1">
+                    <li className="flex flex-col items-start gap-2 lg:w-1/3">
                       <p className="text-2xl lg:text-3xl secondary font-semibold">
-                        70%
+                        {casestudy.stats[2].statistic}
                       </p>
-                      <p className="text-gray-500">Increase in Sales</p>
+                      <p className="text-gray-500 text-sm mt-2 lg-[80%]">
+                        {casestudy.stats[0].title}
+                      </p>
                     </li>
                   </ul>
 
                   <div className="flex gap-2 items-center mt-4 pt-4 border-t-[1px] border-gray-200 pb-6 ">
-                    <div className="px-4 h-[35px] flex items-center justify-center rounded-full border-[1.4px] border-gray-300">
-                      <p className="text-sm">Ad Management</p>
-                    </div>
-                    <div className="px-4 h-[35px] flex items-center justify-center rounded-full border-[1.4px] border-gray-300">
-                      <p className="text-sm">Consulting</p>
-                    </div>
+                    {casestudy.services.map((service, idx) => (
+                      <div className="px-4 h-[35px] flex items-center justify-center rounded-full border-[1.4px] border-gray-300" key={idx}>
+                        <p className="text-sm">{service}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
