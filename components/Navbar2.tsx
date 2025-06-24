@@ -90,11 +90,9 @@ const Navbar2 = () => {
       </div>
 
       <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
-        <Link href="tel:416-995-4979">
-          <Button className="font-semibold h-[45px] w-[160px] text-sm border-[1px] border-gray-700 bg-slate-950 shadow-slate-400 shadow-lg text-white">
+          <Button className="font-semibold h-[45px] text-base w-[160px] border-[1px] border-gray-700 bg-slate-950 shadow-slate-400 shadow-lg text-white">
             Get a free audit
           </Button>
-        </Link>
       </div>
 
       <nav className="lg:hidden bg-transparent z-40">

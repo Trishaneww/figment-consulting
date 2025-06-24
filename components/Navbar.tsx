@@ -78,11 +78,9 @@ const Navbar = () => {
       </div>
 
       <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
-        <Link href="tel:416-995-4979">
           <Button className="font-semibold h-[45px] w-[160px] text-base border-[1px] border-gray-700 bg-white rounded-xl text-black">
             Get a free audit
           </Button>
-        </Link>
       </div>
 
       <nav className="lg:hidden bg-transparent z-40">

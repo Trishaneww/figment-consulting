@@ -6,11 +6,11 @@ import '../styles/global.scss'
 const Footer3 = () => {
   return (
     <div className="fixed z-10 bottom-0 left-0 flex flex-col pt-24 pb-12 px-12 overflow-x-hidden items-center bg-[#171717] w-full">
-        <div className="flex flex-col gap-12 lg:gap-2 flex-wrap lg:flex-row justify-between lg:w-[80%] border-b-[1px] border-b-gray-200 pb-12">
+        <div className="flex flex-col gap-12 lg:gap-2 flex-wrap lg:flex-row justify-between lg:w-[80%] border-b-[1px] border-b-[#a4a4a4] pb-12">
 
         <section className="flex flex-col items-start justify-start gap-2  lg:max-w-[380px] text-slate-50">
             <p className="text-xl lg:text-4xl mb-2 secondary font-medium">Lets <span className="italic">Scale</span> Your Online Store</p>
-            <p className="text-base">We design and develop custom, high-performing websites tailored to help your business stand out and grow.</p>
+            <p className="text-base text-[#a4a4a4]">We design and develop custom, high-performing websites tailored to help your business stand out and grow.</p>
             <Link href="/contact" className="flex items-center gap-1 text-base text-slate-50 group" aria-label="Link leads to contact page">
             <p>Get Started</p>
             <ArrowRight className="group-hover:ml-2 duration-200" />
@@ -44,7 +44,7 @@ const Footer3 = () => {
             </div>
         </section>
         </div>
-        <div className="lg:w-[80%] flex gap-2 text-slate-50 text-sm pt-8">
+        <div className="lg:w-[80%] flex gap-2 text-[#a4a4a4] text-sm pt-8">
             <p>@2025 WIZE CONSULTING</p>
             <p>ALL RIGHTS RESERVED</p>
         </div>
