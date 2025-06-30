@@ -86,7 +86,7 @@ const Projects = () => {
         </p>
       </div>
 
-      <section className="flex flex-col lg:w-[68%] lg:min-w-[1000px] gap-20 mt-12">
+      <section className="flex flex-col lg:w-[68%] lg:min-w-[1000px] gap-20 mt-12 w-full">
         {caseStudies.map((casestudy, idx) => (
           <div
             className="flex flex-col lg:flex-row gap-2 rounded-2xl shadow-xl overflow-hidden bg-[#FAFAFA] lg:h-[440px]"
@@ -137,7 +137,7 @@ const Projects = () => {
                 </li>
               </ul>
 
-              <div className="flex gap-2 items-center mt-4 pt-4 border-t-[1px] border-gray-200 pb-6 ">
+              <div className="flex flex-wrap gap-2 items-center mt-4 pt-4 border-t-[1px] border-gray-200 pb-6 ">
                 {casestudy.services.map((service, idx) => (
                   <div className="px-4 h-[35px] flex items-center justify-center rounded-full border-[1.4px] border-gray-300" key={idx}>
                     <p className="text-sm">{service}</p>

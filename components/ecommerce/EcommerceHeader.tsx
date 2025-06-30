@@ -6,7 +6,7 @@ import { FaShopify } from "react-icons/fa";
 import { FaAmazon } from "react-icons/fa";
 import { SiGoogleanalytics } from "react-icons/si";
 
-const AmazonHeader = () => {
+const EcommerceHeader = () => {
   return (
     <div className="flex flex-col gap-2 justify-center items-center w-full py-14 lg:py-32 px-6 z-20 bg-[#FAFAFA]">
       <div className="flex flex-col gap-2 items-center justify-center text-center">
@@ -78,5 +78,4 @@ const AmazonHeader = () => {
   );
 };
 
-export default AmazonHeader;
-
+export default EcommerceHeader;

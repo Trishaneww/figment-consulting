@@ -3,8 +3,8 @@ import { InlineWidget } from "react-calendly";
 
 const Book = () => {
   return (
-    <div className="flex flex-col items-center z-20 bg-[#FAFAFA] w-full py-14 lg:py-32">
-      <div className="flex flex-col gap-2 items-center justify-center text-center">
+    <div className="flex flex-col items-center z-20 bg-[#FAFAFA] w-full py-14 lg:py-32 px-6">
+      <div className="flex flex-col gap-2 lg:items-center justify-center lg:text-center">
         <p className="tracking-widest text-gray-500 font-semibold text-sm">
           BOOK A FREE 30 MINUTE CONSULTATION
         </p>
@@ -15,34 +15,8 @@ const Book = () => {
           Book a free strategy call and start scaling wizer today.
         </p>
       </div>
-      {/* <section className="flex flex-col gap-2">
-        <p>GET STARTED</p>
-        <p className="text-3xl lg:text-5xl">Reserve your call today</p>
-        <ul className="flex flex-col gap-2">
-          <li className="flex gap-2 items-center">
-            <Check size={18} />
-            <p className="lg:text-lg">
-              Tell us what you’re building and share your design
-            </p>
-          </li>
 
-          <li className="flex gap-2 items-center">
-            <Check size={18} />
-            <p className="lg:text-lg">
-              Tell us what you’re building and share your design
-            </p>
-          </li>
-
-          <li className="flex gap-2 items-center">
-            <Check size={18} />
-            <p className="lg:text-lg">
-              Tell us what you’re building and share your design
-            </p>
-          </li>
-        </ul>
-      </section> */}
-
-      <div className="flex items-center justify-center w-full lg:h-[680px] mt-4 rounded-lg overflow-hidden">
+      <div className="flex items-center justify-center w-full h-[600px] lg:h-[680px] mt-4 rounded-lg overflow-hidden">
         <InlineWidget
           url="https://calendly.com/trishaneww/30min"
           styles={{ height: "100%", width: "1800px", boxShadow: "2rem" }}

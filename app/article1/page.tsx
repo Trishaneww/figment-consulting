@@ -7,9 +7,9 @@ import React from "react";
 
 const Article1 = () => {
   return (
-    <div className="flex flex-col items-center bg-[#FAFAFA]">
+    <div className="flex flex-col items-center bg-[#FAFAFA] z-20 w-full">
       <Navbar2 />
-      <div className="flex flex-col gap-2 items-center justify-center text-center mt-44">
+      <div className="flex flex-col gap-2 items-center justify-center text-center mt-44 bg-[#FAFAFA] z-20 w-full">
         <p className="font-semibold text-sm lg:text-base lg:w-[60%] text-gray-600">
           Blog <span className="mx-2 text-black">/</span>{" "}
           <span className="text-black">

@@ -131,14 +131,14 @@ const CaseStudies = () => {
         <div className="flex flex-col gap-2 justify-center items-center w-full py-32  px-6">
           <div className="flex flex-col gap-2 items-center justify-center text-center">
             <p className="tracking-widest text-gray-500 font-semibold text-sm">
-              PRICING
+              CASE STUDIES
             </p>
-            <p className="font-medium text-3xl lg:text-[2.5rem] secondary">
-              Flexible plans. Scalable <span className="italic">growth.</span>
+            <p className="font-medium text-3xl lg:text-[2.5rem] secondary lg:w-[60%]">
+              See how brands made <span className="italic">impact</span> through our collaboration
             </p>
-            <p className="">
-              From launch to scale, we’ve got you covered at every stage.
-            </p>
+            {/* <p className="lg:w-[50%] mt-2">
+              From listings to launches, see the exact steps we took to help clients scale smarter and sell more.
+            </p> */}
           </div>
 
           <section className="grid grid-cols-1 lg:grid-cols-2 lg:w-[68%] lg:min-w-[1000px] gap-8 mt-12">

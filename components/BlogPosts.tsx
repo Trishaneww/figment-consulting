@@ -3,49 +3,57 @@ import { ArrowRight, Calendar } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import "../styles/global.scss";
+import Link from "next/link";
 
 const BlogPosts = () => {
   return (
-    <div className="flex flex-col items-center py-32 w-full px-6">
+    <div className="flex flex-col items-center py-32 px-6 bg-[#FAFAFA] z-20 w-full mb-[26rem]">
       <div className="flex flex-col gap-2 items-center justify-center text-center">
-        <p className="lg:w-[50%] mt-4 lg:text-sm font-semibold tracking-wide">BLOG</p>
-        <p className="font-semibold text-3xl lg:text-5xl">
-          Latest from our blog
+        <p className="font-semibold tracking-widest text-sm text-gray-500">
+          BLOG
+        </p>
+        <p className="text-3xl lg:text-[2.5rem] font-medium secondary">
+          Insights to help your brand <span className="italic">grow</span>
         </p>
       </div>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-3 mt-12 lg:w-[75%] z-20 bg-[#FAFAFA]">
         {BlogData.slice(0, 3).map((blog, idx) => (
-          <div
-            className="flex flex-col rounded-xl w-full h-[400px] max-w-[360px] md:max-w-[520px] overflow-hidden"
-            key={idx}
-          >
-            <div className="relative overflow-hidden h-[550px] rounded-b-xl">
-              <Image
-                width={1000}
-                height={1000}
-                src="/assets/images/services1.avif"
-                alt="service image"
-                className="hover:scale-110 duration-500 transition-transform h-full w-full"
-              />
-            </div>
+          <Link href="/article1" key={idx}>
+            <div className="flex flex-col rounded-xl w-full h-[400px] max-w-[360px] md:max-w-[520px] overflow-hidden">
+              <div className="relative overflow-hidden h-[550px] rounded-b-xl">
+                <Image
+                  width={1000}
+                  height={1000}
+                  src="/assets/images/services1.avif"
+                  alt="service image"
+                  className="hover:scale-110 duration-500 transition-transform h-full w-full"
+                />
+              </div>
 
-            <div className="flex flex-col justify-between px-4 py-4 items-start text-center h-[140px] mt-4">
-              <div className="flex flex-col text-left font-semibold">
-                <p className="font-semibold text-base w-full tracking-wide">
-                  ARTICLE
-                </p>
-                <p className="mt-2 text-base lg:text-xl">Amazon paid ads</p>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <Calendar size={14} />
-                <p>April 24, 2025</p>
+              <div className="flex flex-col px-4 py-4 items-start text-center lg:h-[140px]">
+                <div className="flex flex-col text-left font-semibold">
+                  <p className="font-semibold text-sm w-full tracking-widest">
+                    ARTICLE
+                  </p>
+                  <p className="text-base lg:text-2xl secondary font-medium">
+                    Social Media Strategies That Actually Work
+                  </p>
+                </div>
+                <div className="flex text-left items-start lg:items-center gap-2 text-sm mt-2 text-gray-500">
+                  <Calendar size={20} />
+                  <p>April 24, 2025 ~ By Trishane Anthony</p>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </section>
-
-      <Button className="w-[200px] h-[48px] font-semibold text-base mt-12 rounded-2xl shadow-lg shadow-slate-400">Explore the blog <ArrowRight className="ml-4" size={19}/></Button>
+      <Link href="/blog">
+        <Button className="w-[200px] h-[48px] font-semibold text-base mt-12 rounded-2xl shadow-lg shadow-slate-400 cursor-pointer">
+          Explore the blog <ArrowRight className="ml-4" size={19} />
+        </Button>
+      </Link>
     </div>
   );
 };

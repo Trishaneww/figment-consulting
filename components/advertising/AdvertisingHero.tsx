@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { IoStar } from "react-icons/io5";
 
-const AmazonHero = () => {
+const AdvertisingHero = () => {
   return (
     <div className="flex flex-col gap-2 justify-center items-center w-full pt-96 px-6 z-20 bg-[#FAFAFA] lg:h-[92vh]">
       <div className="flex flex-col gap-2 items-center justify-center text-center">
@@ -53,4 +53,4 @@ const AmazonHero = () => {
   );
 };
 
-export default AmazonHero;
+export default AdvertisingHero;
