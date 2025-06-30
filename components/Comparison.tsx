@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 const Comparison = () => {
   return (
     <div className="flex flex-col gap-2 justify-center items-center w-full py-14 lg:py-32 px-6 z-20 bg-[#FAFAFA]">
-      <div className="flex flex-col gap-2 items-center justify-center text-center">
+      <div className="flex flex-col gap-2 lg:items-center justify-center lg:text-center">
         <p className="tracking-widest text-gray-500 font-semibold text-sm">
           WHAT SETS US APART
         </p>

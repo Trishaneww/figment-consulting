@@ -42,13 +42,13 @@ const ContactForm = () => {
     } catch (err) {}
   };
   return (
-    <div className="w-full flex flex-col items-center mt-32 lg:h-[100vh] px-6 z-30 bg-[#FAFAFA] mb-[26rem]">
-      <section className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:w-[68%] mt-10 mb-20">
+    <div className="w-full flex flex-col items-center mt-32 lg:h-[100vh] px-6 z-30 bg-[#FAFAFA] mb-[100vh] lg:mb-[26rem]">
+      <section className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:w-[68%] lg:min-w-[1000px] mt-10 mb-20">
         <div className="flex flex-col items-start justify-center gap-1">
           <p className="text-3xl lg:text-7xl font-medium lg:w-[50%] secondary">
-            Scale <span className="italic">Smarter</span>
+            Scale. <span className="italic">Smarter.</span>
           </p>
-          <p className="text-base lg:text-lg font-semibold lg:w-[65%] mb-8 mt-4">
+          <p className="text-base lg:text-lg font-semibold lg:w-[70%] mb-8 mt-4">
             Running an online store? Growing across platforms takes time unless you’re working with Wize. Get expert help launching, optimizing, and scaling without the usual delays.
           </p>
 
@@ -76,7 +76,7 @@ const ContactForm = () => {
 
         <form
           onSubmit={sendEmail}
-          className="w-full lg:w-[95%] flex flex-col gap-2 rounded-xl shadow-lg px-4 lg:px-10 py-4 pt-6  bg-white text-black mt-6 lg:mt-0"
+          className="w-full lg:w-[95%] lg:min-w-[450px] flex flex-col gap-2 rounded-xl shadow-lg px-4 lg:px-10 py-4 pt-6  bg-white text-black mt-6 lg:mt-0"
         >
           <div className="flex flex-col items-start gap-2 mt-12">
             <Pencil size={36} />

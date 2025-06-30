@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 const PricingOptions = () => {
   return (
     <div className="flex flex-col gap-2 justify-center items-center w-full py-14 lg:py-32 px-6 z-20 bg-[#FAFAFA]">
-      <div className="flex flex-col gap-2 items-center justify-center text-center">
+      <div className="flex flex-col gap-2 lg:items-center justify-center lg:text-center">
         <p className="tracking-widest text-gray-500 font-semibold text-sm">
           PRICING
         </p>
@@ -22,7 +22,7 @@ const PricingOptions = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center gap-6 my-20">
         {pricing.slice(0, 1).map((option, idx) => (
           <div
-            className="relative flex flex-col rounded-2xl border-[1px] shadow-md border-gray-200 bg-white gap-4 overflow-hidden w-[340px] lg:w-[440px] h-[520px]"
+            className="relative flex flex-col rounded-2xl border-[1px] shadow-md border-gray-200 bg-white gap-4 overflow-hidden w-[340px] lg:w-[440px] h-[560px] lg:h-[520px]"
             key={idx}
           >
             {/* <div className="w-[45%] h-[200px] bg-gradient-to-r from-[#6bebff] to-[#741dd8] rounded-full relative z-10 blur-[50px] left-[75%] -top-32"></div>
@@ -74,7 +74,7 @@ const PricingOptions = () => {
 
         {pricing.slice(1, 2).map((option, idx) => (
           <div
-            className="relative flex flex-col rounded-2xl border-[4px] shadow-md border-indigo-700 bg-white gap-4 overflow-hidden w-[340px] lg:w-[440px] h-[520px]"
+            className="relative flex flex-col rounded-2xl border-[4px] shadow-md border-indigo-700 bg-white gap-4 overflow-hidden w-[340px] lg:w-[440px] h-[560px] lg:h-[520px]"
             key={idx}
           >
             {/* <div className="w-[45%] h-[200px] bg-gradient-to-r from-[#6bebff] to-[#741dd8] rounded-full relative z-10 blur-[50px] left-[75%] -top-32"></div>

@@ -9,6 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import React from "react";
 import PricingOptions2 from "@/components/pricing/Pricing2";
 import PricingChart from "@/components/pricing/PricingChart";
+import { faqData } from "@/data";
 
 const Pricing = () => {
   const gallery = useRef(null);
@@ -47,7 +48,7 @@ const Pricing = () => {
       <PricingOptions2 />
       <PricingChart />
       <Testimonials />
-      <Faq />
+      <Faq data={faqData} />
       <div className="mb-[26rem]"></div>
       <Footer3 />
     </div>

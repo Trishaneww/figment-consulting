@@ -135,7 +135,7 @@ export default function Testimonials() {
         >
           <p className="font-bold">Logepsum</p>
           <p className="font-medium text-2xl lg:text-[2rem] mt-2 secondary">
-            {quote}
+            "{quote}"
           </p>
           <section className="flex items-center gap-2 mt-6">
             <Image

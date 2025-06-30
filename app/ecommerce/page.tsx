@@ -14,6 +14,10 @@ import Testimonials from "@/components/Testimonials";
 import AmazonSeller from "@/components/amazon/AmazonSeller";
 import LaptopGallery from "@/components/ecommerce/LaptopGallery";
 import MobileGallery from "@/components/ecommerce/MobileGallery";
+import EcommerceHero from "@/components/ecommerce/EcommerceHero";
+import Navbar2 from "@/components/Navbar2";
+import { ecommerceFaqData } from "@/data";
+import EccomerceBenefits from "@/components/ecommerce/EcommerceBenefits";
 
 const Ecommerce = () => {
   const gallery = useRef(null);
@@ -37,10 +41,10 @@ const Ecommerce = () => {
   }, []);
   return (
     <div className="flex flex-col items-center bg-[#FAFAFA] text-slate-950 overflow-hidden">
-      <Navbar />
-      <Hero />
+      <Navbar2 />
+      <EcommerceHero />
       {/* <AmazonHeader /> */}
-      <AmazonBenefits />
+      <EccomerceBenefits/>
       <AmazonFeatures />
       <AmazonSeller />
       {/* <Home /> */}
@@ -56,7 +60,7 @@ const Ecommerce = () => {
       </div>
 
       <Testimonials />
-      <Faq />
+      <Faq data={ecommerceFaqData}/>
       <BlogPreview />
       <Footer3 />
     </div>

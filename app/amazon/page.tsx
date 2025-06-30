@@ -13,6 +13,10 @@ import React from "react";
 import AmazonFeatures from "@/components/amazon/AmazonFeatures";
 import Testimonials from "@/components/Testimonials";
 import AmazonSeller from "@/components/amazon/AmazonSeller";
+import Navbar2 from "@/components/Navbar2";
+import AmazonHero from "@/components/amazon/AmazonHero";
+import LogoCarousel from "@/components/LogoCarousel";
+import { amazonFaqData, faqData } from "@/data";
 
 const Amazon = () => {
   const gallery = useRef(null);
@@ -46,14 +50,15 @@ const Amazon = () => {
   }, []);
   return (
     <div className="flex flex-col items-center bg-[#FAFAFA] text-slate-950 overflow-hidden">
-      <Navbar />
-      <Hero />
-      {/* <AmazonHeader /> */}
+      <Navbar2 />
+      <AmazonHero />
+      {/* <LogoCarousel /> */}
+      <AmazonHeader />
       <AmazonBenefits />
       <AmazonFeatures />
       <AmazonSeller />
       <Testimonials />
-      <Faq />
+      <Faq data={amazonFaqData}/>
       <BlogPreview />
       <Footer3 />
     </div>

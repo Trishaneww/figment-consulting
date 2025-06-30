@@ -2,27 +2,37 @@ import React from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import "../../styles/global.scss";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const EccomerceBenefits = () => {
   return (
     <div className="flex items-center justify-center py-14 lg:py-32 z-20 bg-[#FAFAFA] w-full">
       <div className="flex flex-col items-center px-6 gap-20 lg:gap-12 z-20 lg:w-[88%]">
-        <div className="flex flex-col lg:flex-row items-center justify-between lg:w-[80%]">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-start lg:justify-between lg:w-[80%]">
           <section className="flex flex-col text-left items-start gap-2 lg:w-1/2">
             <p className="text-3xl lg:text-[2.5rem] secondary font-medium lg:w-[70%]">
               Elevate Your Business <span className="italic">Operations</span>
             </p>
-            <p className="lg:w-[80%] mt-1">
+            <p className="lg:w-[80%] mt-2">
               Our advanced features are designed to give you a competitive edge,
               ensuring your business runs smoothly and efficiently.
             </p>
-            <div className="flex flex-col lg:flex-row gap-2 items-center mt-8">
-              <Button className="font-bold border-[0.75px] border-gray-500 h-[48px] w-[200px]">
-                Explore Remix UI Kit
+            <div className="flex flex-col md:flex-row items-center gap-4 mt-6">
+              <Button className="text-base py-6 px-8 font-semibold">
+                Get started today
               </Button>
-              <Button className="bg-white text-black font-bold h-[48px]">
-                View Template
-              </Button>
+              <Link
+                href="/contact"
+                className="flex items-center gap-1 text-base group"
+                aria-label="Link leads to contact page"
+              >
+                <p>Get Started</p>
+                <ArrowRight
+                  className="group-hover:ml-2 duration-200"
+                  size={18}
+                />
+              </Link>
             </div>
           </section>
 
@@ -47,7 +57,7 @@ const EccomerceBenefits = () => {
           </section>
         </div>
 
-        <div className="flex flex-col lg:flex-row-reverse items-center justify-between lg:w-[80%]">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center justify-start lg:justify-between lg:w-[80%]">
           <section className="flex flex-col text-left items-start gap-2 lg:w-1/2 lg:ml-16">
             <p className="text-3xl lg:text-[2.5rem] secondary font-medium lg:w-[70%]">
               Elevate Your Business <span className="italic">Operations</span>
@@ -56,13 +66,21 @@ const EccomerceBenefits = () => {
               Our advanced features are designed to give you a competitive edge,
               ensuring your business runs smoothly and efficiently.
             </p>
-            <div className="flex flex-col lg:flex-row gap-2 items-center mt-8">
-              <Button className="font-bold border-[0.75px] border-gray-500 h-[48px] w-[200px]">
-                Explore Remix UI Kit
+            <div className="flex flex-col md:flex-row items-center gap-4 mt-6">
+              <Button className="text-base py-6 px-8 font-semibold">
+                Get started today
               </Button>
-              <Button className="bg-white text-black font-bold h-[48px]">
-                View Template
-              </Button>
+              <Link
+                href="/contact"
+                className="flex items-center gap-1 text-base group"
+                aria-label="Link leads to contact page"
+              >
+                <p>Get Started</p>
+                <ArrowRight
+                  className="group-hover:ml-2 duration-200"
+                  size={18}
+                />
+              </Link>
             </div>
           </section>
 
@@ -87,7 +105,7 @@ const EccomerceBenefits = () => {
           </section>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between lg:w-[80%]">
+         <div className="flex flex-col lg:flex-row lg:items-center justify-start lg:justify-between lg:w-[80%]">
           <section className="flex flex-col text-left items-start gap-2 lg:w-1/2">
             <p className="text-3xl lg:text-[2.5rem] secondary font-medium lg:w-[70%]">
               Elevate Your Business <span className="italic">Operations</span>
@@ -96,13 +114,21 @@ const EccomerceBenefits = () => {
               Our advanced features are designed to give you a competitive edge,
               ensuring your business runs smoothly and efficiently.
             </p>
-            <div className="flex flex-col lg:flex-row gap-2 items-center mt-8">
-              <Button className="font-bold border-[0.75px] border-gray-500 h-[48px] w-[200px]">
-                Explore Remix UI Kit
+            <div className="flex flex-col md:flex-row items-center gap-4 mt-6">
+              <Button className="text-base py-6 px-8 font-semibold">
+                Get started today
               </Button>
-              <Button className="bg-white text-black font-bold h-[48px]">
-                View Template
-              </Button>
+              <Link
+                href="/contact"
+                className="flex items-center gap-1 text-base group"
+                aria-label="Link leads to contact page"
+              >
+                <p>Get Started</p>
+                <ArrowRight
+                  className="group-hover:ml-2 duration-200"
+                  size={18}
+                />
+              </Link>
             </div>
           </section>
 
@@ -127,7 +153,7 @@ const EccomerceBenefits = () => {
           </section>
         </div>
 
-        <div className="flex flex-col lg:flex-row-reverse items-center justify-between lg:w-[80%]">
+        <div className="flex flex-col lg:flex-row-reverse lg:items-center justify-start lg:justify-between lg:w-[80%]">
           <section className="flex flex-col text-left items-start gap-2 lg:w-1/2 lg:ml-16">
             <p className="text-3xl lg:text-[2.5rem] secondary font-medium lg:w-[70%]">
               Elevate Your Business <span className="italic">Operations</span>
@@ -136,13 +162,21 @@ const EccomerceBenefits = () => {
               Our advanced features are designed to give you a competitive edge,
               ensuring your business runs smoothly and efficiently.
             </p>
-            <div className="flex flex-col lg:flex-row gap-2 items-center mt-8">
-              <Button className="font-bold border-[0.75px] border-gray-500 h-[48px] w-[200px]">
-                Explore Remix UI Kit
+            <div className="flex flex-col md:flex-row items-center gap-4 mt-6">
+              <Button className="text-base py-6 px-8 font-semibold">
+                Get started today
               </Button>
-              <Button className="bg-white text-black font-bold h-[48px]">
-                View Template
-              </Button>
+              <Link
+                href="/contact"
+                className="flex items-center gap-1 text-base group"
+                aria-label="Link leads to contact page"
+              >
+                <p>Get Started</p>
+                <ArrowRight
+                  className="group-hover:ml-2 duration-200"
+                  size={18}
+                />
+              </Link>
             </div>
           </section>
 
@@ -166,6 +200,7 @@ const EccomerceBenefits = () => {
             />
           </section>
         </div>
+
       </div>
     </div>
   );

@@ -41,58 +41,69 @@ const Navbar2 = () => {
   return (
     <div
       className={`
-         flex w-full justify-between items-center navbar gap-8 px-4 lg:w-[75%] text-black py-6 z-80 fixed 
+         flex w-full justify-center items-center navbar gap-8 px-4  text-black py-6 z-80 fixed 
         transition-all duration-300 ease-in-out
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}
+        ${
+          visible
+            ? "opacity-100 translate-y-0 bg-[#FAFAFA]"
+            : "opacity-0 -translate-y-4"
+        }
       `}
     >
-      <div className="flex gap-8 items-center w-full lg:w-1/3">
-        <Link
-          href="/"
-          className={cn("relative  items-center flex space-x-1 text-slate-950")}
-          aria-label="homepage link"
-        >
-          <p className="text-lg lg:text-xl font-extrabold">Wize Consulting</p>
-        </Link>
-      </div>
-
-      <div className="hidden lg:flex justify-center items-center gap-6 w-[55%]">
-        {navItems.map((item, idx) => (
+      <div className="flex w-full justify-between items-center navbar gap-8 px-4 lg:w-[75%]">
+        <div className="flex gap-8 items-center w-full lg:w-1/3">
           <Link
-            href={item.href}
-            key={idx}
+            href="/"
             className={cn(
-              "relative items-center hidden lg:flex space-x-1 text-slate-950 font-semibold text-base"
+              "relative  items-center flex space-x-1 text-slate-950"
             )}
-            aria-label="navigation link"
+            aria-label="homepage link"
           >
-            {item.title}
+            <p className="text-lg lg:text-xl font-extrabold">Wize Consulting</p>
           </Link>
-        ))}
-        {/* <NavigationMenu className="bg-transparent">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger
-                className={cn(
-                  "relative items-center hidden lg:flex space-x-1 text-slate-950 font-semibold text-base"
-                )}
-                aria-label="navigation link"
-              >
-                Item One
-              </NavigationMenuTrigger>
-              <NavigationMenuContent className="bg-transparent">
-                <NavigationMenuLink>Link</NavigationMenuLink>
-                <NavigationMenuLink>Link</NavigationMenuLink>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu> */}
-      </div>
+        </div>
 
-      <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
-          <Button className="font-semibold h-[45px] text-base w-[160px] border-[1px] border-gray-700 bg-slate-950 shadow-slate-400 shadow-lg text-white">
-            Get a free audit
-          </Button>
+        <div className="hidden lg:flex justify-center items-center gap-6 w-[55%]">
+          {navItems.map((item, idx) => (
+            <Link
+              href={item.href}
+              key={idx}
+              className={cn(
+                "relative items-center hidden lg:flex space-x-1 text-slate-950 text-base"
+              )}
+              aria-label="navigation link"
+            >
+              {item.title}
+            </Link>
+          ))}
+          <NavigationMenu className="bg-transparent">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger
+                  className={cn(
+                    "relative items-center hidden lg:flex space-x-1 text-slate-950 text-base"
+                  )}
+                  aria-label="navigation link"
+                >
+                  Core Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="bg-[#FAFAFA] flex flex-col gap-3 text-base py-4 pr-12">
+                  <Link href="/amazon">Amazon Management</Link>
+                  <Link href="/ecommerce">Ecommerce Development</Link>
+                  <Link href="/advertising">Advertising</Link>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
+        <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
+          <Link href="/contact">
+            <Button className="font-semibold h-[45px] text-base w-[160px] border-[1px] border-gray-700 bg-slate-950 text-white">
+              Get a free audit
+            </Button>
+          </Link>
+        </div>
       </div>
 
       <nav className="lg:hidden bg-transparent z-40">
@@ -112,19 +123,45 @@ const Navbar2 = () => {
             <X size={20} />
           </label>
           <div className="flex flex-col gap-2 w-full text-center font-semibold mt-12">
-            {/* <Link href="/about" className="text-black w-full text-lg" aria-label="navigation link">About</Link> 
-          {services.map((service, idx) => (
-            <Link href={service.link} className="text-black -mt-4 w-full text-lg" key={idx}>{service.title}</Link>
-          ))} */}
             <Link
-              href="/contact"
+              href="/"
+              className="text-black w-full text-lg"
+              aria-label="navigation link"
+            >
+              Home
+            </Link>
+            {navItems.map((item, idx) => (
+              <Link
+                href={item.href}
+                className="text-black -mt-4 w-full text-lg"
+                key={idx}
+              >
+                {item.title}
+              </Link>
+            ))}
+            <Link
+              href="/amazon"
               className="text-black -mt-4 w-full text-lg"
               aria-label="navigation link"
             >
-              Contact Us
+              Amazon
+            </Link>
+             <Link
+              href="/ecommerce"
+              className="text-black -mt-4 w-full text-lg"
+              aria-label="navigation link"
+            >
+              Ecommerce
+            </Link>
+             <Link
+              href="/advertising"
+              className="text-black -mt-4 w-full text-lg"
+              aria-label="navigation link"
+            >
+              Advertising
             </Link>
             <Link href="tel:416-995-4979">
-              <Button className="h-[48px] w-full text-base bg-blue-500 text-white">
+              <Button className="h-[48px] w-full text-base text-white">
                 Call us now
               </Button>
             </Link>

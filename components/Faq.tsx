@@ -5,14 +5,23 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { faqData } from "@/data";
+// import { faqData } from "@/data";
 import '../styles/global.scss'
 
-const Faq = () => {
+type ListItem = {
+  item: string,
+  content: string
+}
+
+type OrderedListProps = {
+  data: ListItem[];
+};
+
+const Faq = ({data} : OrderedListProps) => {
   return (
     <div className="flex flex-col justify-center items-center scroll-smooth py-14 lg:py-32 px-6 gap-6 w-full bg-gray-100 z-20">
-      <section className="flex flex-col items-center justify-center gap-2 text-center xl:text-left p-2">
-        <h1 className="text-3xl lg:text-[2.5rem] font-medium text-center secondary">
+      <section className="flex flex-col lg:items-center justify-center w-full">
+        <h1 className="text-3xl lg:text-[2.5rem] font-medium lg:text-center secondary">
           Questions?<span className="italic"> Answered</span>
         </h1>
         {/* <Button className="h-[45px] w-[140px] rounded-lg text-base shadow-slate-400 shadow-lg mt-8">Email us</Button> */}
@@ -24,7 +33,7 @@ const Faq = () => {
           collapsible
           className="flex flex-col gap-2 w-full lg:w-[48%]"
         >
-          {faqData.map((accordion: any, idx: number) => (
+          {data.map((accordion: any, idx: number) => (
             <AccordionItem
               value={`item-${idx}`}
               className="py-2 rounded-2xl border-b-[1px] border-gray-300"

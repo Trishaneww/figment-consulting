@@ -50,7 +50,7 @@ const Intro = () => {
           </div>
 
           <div className="w-full flex flex-col items-start gap-6 lg:h-[150px]">
-            <p className="font-medium text-5xl lg:text-7xl secondary">50K+</p>
+            <p className="font-medium text-5xl lg:text-7xl secondary">80k+</p>
             <p>Growth in monthly Amazon sales</p>
           </div>
 

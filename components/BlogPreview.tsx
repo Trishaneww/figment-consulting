@@ -3,12 +3,15 @@ import { Calendar } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import "../styles/global.scss";
+import Link from "next/link";
 
 const BlogPreview = () => {
   return (
     <div className="flex flex-col items-center px-6 py-14 lg:py-32 mb-[26rem] w-full z-20 bg-[#FAFAFA]">
       <div className="lg:w-[68%] flex flex-col gap-2 items-start justify-center text-left">
-        <p className="font-semibold tracking-widest text-sm">BLOG</p>
+        <p className="font-semibold tracking-widest text-sm text-gray-500">
+          BLOG
+        </p>
         <p className="lg:w-[70%] text-3xl lg:text-[2.5rem] font-medium secondary">
           Insights to help your brand <span className="italic">grow</span>
         </p>
@@ -41,34 +44,38 @@ const BlogPreview = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-row flex-wrap lg:flex-col gap-2">
           {BlogData.slice(0, 3).map((blog, idx) => (
-            <div className="flex flex-col lg:flex-row rounded-xl w-full overflow-hidden items-center" key={idx}>
-              <div className="relative overflow-hidden h-[200px] lg:h-[150px] rounded-xl w-full lg:w-1/2">
-                <Image
-                  width={1000}
-                  height={1000}
-                  src={blog.src}
-                  alt="service image"
-                  className="hover:scale-110 duration-500 transition-transform h-full w-full"
-                />
-              </div>
+            <Link href="/article1"  key={idx}>
+              <div
+                className="flex flex-col lg:flex-row rounded-xl w-full max-w-[350px] lg:max-w-[600px] lg:w-full overflow-hidden items-center"
+              >
+                <div className="relative overflow-hidden h-[200px] lg:h-[150px] rounded-xl w-full lg:w-1/2">
+                  <Image
+                    width={1000}
+                    height={1000}
+                    src={blog.src}
+                    alt="service image"
+                    className="hover:scale-110 duration-500 transition-transform h-full w-full"
+                  />
+                </div>
 
-              <div className="flex flex-col px-4 py-4 items-start text-center lg:h-[140px]">
-                <div className="flex flex-col text-left font-semibold">
-                  <p className="font-semibold text-sm w-full tracking-widest">
-                    ARTICLE
-                  </p>
-                  <p className="text-base lg:text-2xl secondary font-medium">
-                    Social Media Strategies That Actually Work
-                  </p>
-                </div>
-                <div className="flex text-left items-start lg:items-center gap-2 text-sm mt-2 text-gray-500">
-                  <Calendar size={20}/>
-                  <p>April 24, 2025 ~ By Trishane Anthony</p>
+                <div className="flex flex-col px-4 py-4 items-start text-center lg:h-[140px]">
+                  <div className="flex flex-col text-left font-semibold">
+                    <p className="font-semibold text-sm w-full tracking-widest">
+                      ARTICLE
+                    </p>
+                    <p className="text-base lg:text-2xl secondary font-medium">
+                      Social Media Strategies That Actually Work
+                    </p>
+                  </div>
+                  <div className="flex text-left items-start lg:items-center gap-2 text-sm mt-2 text-gray-500">
+                    <Calendar size={20} />
+                    <p>April 24, 2025 ~ By Trishane Anthony</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
