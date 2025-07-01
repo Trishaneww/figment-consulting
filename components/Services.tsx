@@ -9,15 +9,15 @@ import { SiGoogleanalytics } from "react-icons/si";
 const Services = () => {
   return (
     <div className="flex flex-col gap-2 justify-center items-center w-full py-14 lg:py-32 px-6 z-20 bg-[#FAFAFA]">
-      <div className="flex flex-col gap-2 items-start lg:tems-center justify-center lg:text-center">
+      <div className="flex flex-col gap-2 items-center justify-center text-center">
         <p className="tracking-widest text-gray-500 font-semibold text-sm">
-          SERVICES
+          OUR CORE SERVICES
         </p>
         <p className="font-medium text-3xl lg:text-[2.5rem] secondary">
-          Flexible plans. Scalable <span className="italic">growth.</span>
+          Services designed to <span className="italic">drive</span> sales
         </p>
-        <p className="">
-          From launch to scale, we’ve got you covered at every stage.
+        <p className="lg:w-[70%]">
+          Our tailored services cover every stage of your online store's growth—strategy, development, advertising, and beyond.
         </p>
       </div>
 

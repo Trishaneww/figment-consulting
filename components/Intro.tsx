@@ -22,7 +22,7 @@ const Intro = () => {
       <div className="flex flex-col lg:flex-row gap-12 justify-between lg:w-[65%] mt-12">
         <section className="flex flex-col gap-4 lg:w-1/2">
           <p className="text-3xl lg:text-[2.5rem] font-medium lg:w-[80%] secondary">
-            Grow <span className="italic">Smarter</span>. Scale <span className="italic">Faster</span>. Sell <span className="italic">Everywhere</span>.
+            Grow <span className="italic">smarter.</span> Scale <span className="italic">faster.</span> Sell <span className="italic">everywhere.</span>
           </p>
           <p className="text-base lg:w-[85%]">
             From Amazon to Shopify, we help eCommerce brands break barriers. Through high-converting websites, expert ad strategy, and multi-channel growth plans, Wize turns your store into a scalable sales machine.

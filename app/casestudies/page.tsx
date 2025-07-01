@@ -25,10 +25,7 @@ const caseStudies = [
         title: "Increase in product listing impressions",
       },
     ],
-    services: [
-      "Amazon Consulting",
-      "Amazon Ads Management",
-    ],
+    services: ["Amazon Consulting", "Amazon Ads Management"],
     src: "/assets/images/services2.avif",
   },
   {
@@ -71,7 +68,7 @@ const caseStudies = [
     services: ["Custom eCommerce Development", "Conversion Rate Optimization"],
     src: "/assets/images/services3.avif",
   },
-   {
+  {
     quote:
       "Glowify boosts DTC sales with custom Shopify store and Amazon launch",
     stats: [
@@ -126,7 +123,7 @@ const CaseStudies = () => {
   return (
     <div className="flex flex-col items-center bg-[#FAFAFA]">
       <Navbar2 />
-      <div className="flex flex-col items-center mb-[26rem] bg-[#FAFAFA] z-20 w-full">
+      <div className="flex flex-col items-center mb-[94vh] lg:mb-[26rem] bg-[#FAFAFA] z-20 w-full">
         <div className="mt-20"></div>
         <div className="flex flex-col gap-2 justify-center items-center w-full py-32  px-6">
           <div className="flex flex-col gap-2 items-center justify-center text-center">
@@ -134,7 +131,8 @@ const CaseStudies = () => {
               CASE STUDIES
             </p>
             <p className="font-medium text-3xl lg:text-[2.5rem] secondary lg:w-[60%]">
-              See how brands made <span className="italic">impact</span> through our collaboration
+              See how brands made <span className="italic">impact</span> through
+              our collaboration
             </p>
             {/* <p className="lg:w-[50%] mt-2">
               From listings to launches, see the exact steps we took to help clients scale smarter and sell more.
@@ -192,9 +190,12 @@ const CaseStudies = () => {
                     </li>
                   </ul>
 
-                  <div className="flex gap-2 items-center mt-4 pt-4 border-t-[1px] border-gray-200 pb-6 ">
+                  <div className="flex flex-wrap gap-2 items-center mt-4 pt-4 border-t-[1px] border-gray-200 pb-6 ">
                     {casestudy.services.map((service, idx) => (
-                      <div className="px-4 h-[35px] flex items-center justify-center rounded-full border-[1.4px] border-gray-300" key={idx}>
+                      <div
+                        className="px-4 h-[35px] flex items-center justify-center rounded-full border-[1.4px] border-gray-300"
+                        key={idx}
+                      >
                         <p className="text-sm">{service}</p>
                       </div>
                     ))}

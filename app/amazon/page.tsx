@@ -56,7 +56,7 @@ const Amazon = () => {
       <AmazonHeader />
       <AmazonBenefits />
       <AmazonFeatures />
-      <AmazonSeller />
+      {/* <AmazonSeller /> */}
       <Testimonials />
       <Faq data={amazonFaqData}/>
       <BlogPreview />

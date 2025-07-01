@@ -6,6 +6,7 @@ import ContactForm from "@/components/ContactForm";
 import Footer3 from "@/components/Footer3";
 import Navbar2 from "@/components/Navbar2";
 import React from "react";
+import { Toaster } from "sonner";
 
 const Contact = () => {
   const gallery = useRef(null);
@@ -42,6 +43,7 @@ const Contact = () => {
       <Navbar2 />
       <ContactForm />
       <Footer3 />
+      <Toaster />
     </div>
   );
 };

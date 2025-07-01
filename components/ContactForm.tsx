@@ -1,5 +1,12 @@
 "use client";
-import { ChartNoAxesColumn, ChartNoAxesColumnIncreasing, Laptop, Mail, Pencil, Rocket } from "lucide-react";
+import {
+  ChartNoAxesColumn,
+  ChartNoAxesColumnIncreasing,
+  Laptop,
+  Mail,
+  Pencil,
+  Rocket,
+} from "lucide-react";
 import React from "react";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
@@ -7,7 +14,7 @@ import { toast, Toaster } from "sonner";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import '../styles/global.scss'
+import "../styles/global.scss";
 
 const ContactForm = () => {
   const [emailError, setEmailError] = useState("");
@@ -16,7 +23,6 @@ const ContactForm = () => {
   const sendEmail = (e: any) => {
     e.preventDefault();
     try {
-      console.log("hi");
       if (e.target.email.value === "" || e.target.full_name.value === "") {
         if (e.target.email.value === "") {
           setEmailError("Email is required");
@@ -35,6 +41,8 @@ const ContactForm = () => {
         setEmailError("");
         setNameError("");
 
+        console.log("hi");
+
         toast("Email Sent", {
           description: "We will get back to you shortly",
         });
@@ -42,32 +50,37 @@ const ContactForm = () => {
     } catch (err) {}
   };
   return (
-    <div className="w-full flex flex-col items-center mt-32 lg:h-[100vh] px-6 z-30 bg-[#FAFAFA] mb-[100vh] lg:mb-[26rem]">
+    <div className="w-full flex flex-col items-center pt-32 lg:h-[100vh] px-6 z-30 bg-[#FAFAFA] mb-[100vh] lg:mb-[26rem]">
       <section className="flex flex-col lg:flex-row items-center justify-center gap-2 lg:w-[68%] lg:min-w-[1000px] mt-10 mb-20">
         <div className="flex flex-col items-start justify-center gap-1">
           <p className="text-3xl lg:text-7xl font-medium lg:w-[50%] secondary">
             Scale. <span className="italic">Smarter.</span>
           </p>
           <p className="text-base lg:text-lg font-semibold lg:w-[70%] mb-8 mt-4">
-            Running an online store? Growing across platforms takes time unless you’re working with Wize. Get expert help launching, optimizing, and scaling without the usual delays.
+            Running an online store? Growing across platforms takes time unless
+            you’re working with Wize. Get expert help launching, optimizing, and
+            scaling without the usual delays.
           </p>
 
-            <div className="flex gap-2 items-center">
-            <Rocket size={18} />
+          <div className="flex gap-2 items-center">
+            <Rocket size={18} className="min-w-[20px] min-h-[20px]" />
             <p className="">
               Share your goals—we’ll build a custom growth plan for your brand
             </p>
           </div>
 
           <div className="flex gap-2 items-center">
-            <ChartNoAxesColumnIncreasing size={18} />
+            <ChartNoAxesColumnIncreasing
+              size={18}
+              className="min-w-[20px] min-h-[20px]"
+            />
             <p className="">
               Grow on Amazon with optimized listings, SEO, and ad campaigns
             </p>
           </div>
 
           <div className="flex gap-2 items-center">
-            <Laptop size={18} />
+            <Laptop size={18} className="min-w-[20px] min-h-[20px]" />
             <p className="">
               Launch high-converting eCommerce sites built for speed and scale
             </p>
@@ -81,7 +94,9 @@ const ContactForm = () => {
           <div className="flex flex-col items-start gap-2 mt-12">
             <Pencil size={36} />
             <p className="lg:text-2xl lg:w-[80%]">
-              <span className="font-semibold">Brief</span> us about your store, goals, or challenges, we’ll review your needs and get back to you with a clear path to scale
+              <span className="font-semibold">Brief</span> us about your store,
+              goals, or challenges, we’ll review your needs and get back to you
+              with a clear path to scale
             </p>
           </div>
           {/* <Mail className="text-blue-500" size={40} /> */}
@@ -113,7 +128,7 @@ const ContactForm = () => {
                 <Input
                   type="text"
                   placeholder="Company"
-                  name="full_name"
+                  name="company"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
               </div>
@@ -123,7 +138,7 @@ const ContactForm = () => {
                 <Input
                   type="text"
                   placeholder="https://"
-                  name="email"
+                  name="domain"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
               </div>
@@ -136,13 +151,13 @@ const ContactForm = () => {
                 className="w-full h-[100px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
               />
             </div>
-                 <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full gap-2 lg:gap-4">
+            <div className="flex flex-col lg:flex-row items-center lg:justify-between w-full gap-2 lg:gap-4">
               <div className="flex flex-col items-start gap-1 w-full">
                 <p>Amazon Store</p>
                 <Input
                   type="text"
                   placeholder="Amazon Store"
-                  name="full_name"
+                  name="amazon"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
               </div>
@@ -152,14 +167,14 @@ const ContactForm = () => {
                 <Input
                   type="text"
                   placeholder="Industry"
-                  name="email"
+                  name="industry"
                   className="w-full h-[50px] p-2 placeholder:text-gray-500 placeholder:text-base focus-visible:ring-0 border-[1px] border-gray-200 bg-gray-50"
                 />
               </div>
             </div>
             <Button
               type="submit"
-              className="w-full h-[45px] bg-slate-950 text-white text-base shadow-slate-400 shadow-lg mb-6 font-semibold"
+              className="w-full h-[45px] bg-slate-950 text-white text-base shadow-slate-400 shadow-lg mb-6 font-semibold cursor-pointer"
             >
               Request a free quote
             </Button>
@@ -176,7 +191,6 @@ const ContactForm = () => {
           </p> */}
         </form>
       </section>
-      <Toaster />
     </div>
   );
 };

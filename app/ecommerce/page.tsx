@@ -18,6 +18,7 @@ import EcommerceHero from "@/components/ecommerce/EcommerceHero";
 import Navbar2 from "@/components/Navbar2";
 import { ecommerceFaqData } from "@/data";
 import EccomerceBenefits from "@/components/ecommerce/EcommerceBenefits";
+import EcommerceFeatures from "@/components/ecommerce/EcommerceFeatures";
 
 const Ecommerce = () => {
   const gallery = useRef(null);
@@ -45,8 +46,8 @@ const Ecommerce = () => {
       <EcommerceHero />
       {/* <AmazonHeader /> */}
       <EccomerceBenefits/>
-      <AmazonFeatures />
-      <AmazonSeller />
+      <EcommerceFeatures />
+      {/* <AmazonSeller /> */}
       {/* <Home /> */}
 
       <div className="relative z-20 bg-[#FAFAFA] px-2 pt-12 lg:pt-44">

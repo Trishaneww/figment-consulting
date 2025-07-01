@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTransform, useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
 import Navbar2 from "@/components/Navbar2";
-import { BlogData } from "@/data";
+import { BlogData, blogPosts } from "@/data";
 import { Calendar } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -44,12 +44,9 @@ const Blog = () => {
   }, []);
   return (
     <>
-      <Head>
-        <title>Blog</title>
-      </Head>
       <div className="flex flex-col items-center bg-[#FAFAFA]">
         <Navbar2 />
-        <div className="flex flex-col items-center w-full bg-[#FAFAFA] z-20 mb-[26rem] px-6">
+        <div className="flex flex-col items-center w-full bg-[#FAFAFA] z-20 mb-[94vh] lg:mb-[26rem] px-6">
           <div className="lg:w-[68%] flex flex-col gap-2 items-center justify-center text-center mt-48">
              <p className="tracking-widest text-gray-500 font-semibold text-sm">
               BLOG
@@ -60,7 +57,7 @@ const Blog = () => {
           </div>
 
           <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-content-center gap-6 lg:gap-4 mt-12 lg:w-[75%] pb-32">
-            {BlogData.map((blog, idx) => (
+            {blogPosts.map((blog, idx) => (
               <Link href="/article1" key={idx}>
                 <div className="flex flex-col rounded-xl w-full h-[400px] md:max-w-[520px] overflow-hidden">
                   <div className="relative overflow-hidden h-[550px] rounded-b-xl">
@@ -79,12 +76,12 @@ const Blog = () => {
                         ARTICLE
                       </p>
                       <p className="text-base lg:text-2xl secondary font-medium">
-                        Amazon paid ads
+                       {blog.title}
                       </p>
                     </div>
                     <div className="flex items-center gap-2 text-sm mt-2 text-gray-500">
                       <Calendar size={14} />
-                      <p>April 24, 2025 ~ By Trishane Anthony</p>
+                      <p>{blog.createdOn} ~ By {blog.author}</p>
                     </div>
                   </div>
                 </div>
