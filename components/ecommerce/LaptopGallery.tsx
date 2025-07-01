@@ -105,7 +105,7 @@ const LaptopGallery = () => {
           <div
             key={colIndex}
             className={`flex flex-col gap-12 will-change-transform ${
-              colIndex % 2 === 0 ? `-mt-[3000px]` : "-mt-[6000px]"
+              colIndex % 2 === 0 ? `-mt-[4000px]` : "-mt-[6000px]"
             }`}
             ref={(el) => {
               imageRefs.current[colIndex][0] = el;

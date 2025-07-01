@@ -3,12 +3,12 @@ import styles from "@/styles/LogoCarousel.module.scss";
 
 const logos = [
   "/assets/images/logo3.png",
+  "/assets/images/logo5.png",
+  "/assets/images/logo8.png",
   "/assets/images/logo3.png",
-  "/assets/images/logo3.png",
-  "/assets/images/logo3.png",
-  "/assets/images/logo3.png",
-  "/assets/images/logo3.png",
-  "/assets/images/logo3.png",
+  "/assets/images/logo6.png",
+  "/assets/images/logo9.png",
+  "/assets/images/logo7.png",
 ];
 
 export default function LogoCarousel() {

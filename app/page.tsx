@@ -60,6 +60,7 @@ const page = () => {
       <LogoCarousel />
       <Intro />
       <Projects />
+      <div id="services"></div>
       <Services />
       <Comparison />
       <Testimonials />

@@ -64,7 +64,7 @@ const Navbar2 = () => {
         </div>
 
         <div className="hidden lg:flex justify-center items-center gap-6 w-[55%]">
-          {navItems.map((item, idx) => (
+          {navItems.slice(0,3).map((item, idx) => (
             <Link
               href={item.href}
               key={idx}
@@ -90,11 +90,25 @@ const Navbar2 = () => {
                 <NavigationMenuContent className="bg-[#FAFAFA] flex flex-col gap-3 text-base py-4 pr-12">
                   <Link href="/amazon">Amazon Management</Link>
                   <Link href="/ecommerce">Ecommerce Development</Link>
-                  <Link href="/advertising">Advertising</Link>
+                  {/* <Link href="/advertising">Advertising</Link> */}
                 </NavigationMenuContent>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
+
+
+          {navItems.slice(3,4).map((item, idx) => (
+            <Link
+              href={item.href}
+              key={idx}
+              className={cn(
+                "relative items-center hidden lg:flex space-x-1 text-slate-950 text-base"
+              )}
+              aria-label="navigation link"
+            >
+              {item.title}
+            </Link>
+          ))}
         </div>
 
         <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
