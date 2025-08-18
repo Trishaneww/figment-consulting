@@ -10,14 +10,14 @@ const AmazonSeller = () => {
           <span className="italic">growth.</span>
         </p>
       </div> */}
-      <div className="lg:w-[68%] flex flex-col gap-2 items-start justify-center text-left">
+      <div className="lg:w-[74%] flex flex-col gap-2 items-start justify-center text-left">
         <p className="font-semibold tracking-widest text-sm">BLOG</p>
         <p className="lg:w-[70%] text-3xl lg:text-[2.5rem] font-medium secondary">
           Insights to help your brand <span className="italic">grow</span>
         </p>
       </div>
 
-      <section className="flex flex-col items-center justify-center mt-12 lg:w-[68%]">
+      <section className="flex flex-col items-center justify-center mt-12 lg:w-[74%]">
         <div className="relative flex items-baseline justify-center overflow-hidden w-full">
           <Image
             width={1600}
@@ -31,20 +31,29 @@ const AmazonSeller = () => {
         </div>
 
         <div className="w-full flex flex-col lg:flex-row lg:justify-between gap-2 lg:gap-20 mt-8 px-2">
-            <div className="flex flex-col gap-2">
-                <p className="text-lg font-semibold">No devs required</p>
-                <p className="text-gray-500">Framer lets you design, build, and publish your site in hours. One tool. Total control. No code needed.</p>
-            </div>
+          <div className="flex flex-col gap-2">
+            <p className="text-lg font-semibold">No devs required</p>
+            <p className="text-gray-500">
+              Framer lets you design, build, and publish your site in hours. One
+              tool. Total control. No code needed.
+            </p>
+          </div>
 
-            <div className="flex flex-col gap-2">
-                <p className="text-lg font-semibold">No devs required</p>
-                <p className="text-gray-500">Framer lets you design, build, and publish your site in hours. One tool. Total control. No code needed.</p>
-            </div>
+          <div className="flex flex-col gap-2">
+            <p className="text-lg font-semibold">No devs required</p>
+            <p className="text-gray-500">
+              Framer lets you design, build, and publish your site in hours. One
+              tool. Total control. No code needed.
+            </p>
+          </div>
 
-            <div className="flex flex-col gap-2">
-                <p className="text-lg font-semibold">No devs required</p>
-                <p className="text-gray-500">Framer lets you design, build, and publish your site in hours. One tool. Total control. No code needed.</p>
-            </div>
+          <div className="flex flex-col gap-2">
+            <p className="text-lg font-semibold">No devs required</p>
+            <p className="text-gray-500">
+              Framer lets you design, build, and publish your site in hours. One
+              tool. Total control. No code needed.
+            </p>
+          </div>
         </div>
       </section>
     </div>

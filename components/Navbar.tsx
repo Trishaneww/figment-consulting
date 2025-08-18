@@ -2,12 +2,12 @@
 import React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { Menu, Phone, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 import "../styles/global.scss";
 import { navItems } from "@/data";
-import Image from "next/image";
-import { useEffect, useState } from "react";
+import styles from "@/styles/landing.module.scss";
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,99 +18,82 @@ import {
 } from "./ui/navigation-menu";
 
 const Navbar = () => {
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 10) {
-        setVisible(false); // scrolling down
-      } else {
-        setVisible(true); // scrolling up or near top
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
-
   return (
     <div
       className={`
-         flex w-full justify-center items-center navbar gap-8 px-4 text-slate-50 py-6 z-80 fixed 
-        transition-all duration-300 ease-in-out bg-transparent
-        ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-4"}
-      `}
+         flex w-full justify-center items-center navbar gap-8 px-4  text-black py-6 z-80 fixed 
+        transition-all duration-300 ease-in-out bg-[#FAFAFA] border-b-[1px] border-slate-200`}
     >
       <div className="flex w-full justify-between items-center navbar gap-8 px-4 lg:w-[75%]">
-        <div className="flex gap-8 items-center w-full lg:w-1/3">
+        <div className="flex gap-8 items-end w-full">
           <Link
             href="/"
             className={cn(
-              "relative  items-center flex space-x-1 text-slate-50"
+              "relative  items-center flex space-x-1 text-slate-950"
             )}
             aria-label="homepage link"
           >
-            <p className="text-lg lg:text-xl font-extrabold">Wize Consulting</p>
+            <p className="text-xl lg:text-2xl font-extrabold secondary">
+              Wize Consulting
+            </p>
           </Link>
+
+          <div className="hidden lg:flex justify-center items-end gap-6">
+            {navItems.slice(0, 3).map((item, idx) => (
+              <Link
+                href={item.href}
+                key={idx}
+                className={cn(
+                  "relative items-center hidden lg:flex space-x-1 text-slate-950 text-base font-semibold"
+                )}
+                aria-label="navigation link"
+              >
+                {item.title}
+              </Link>
+            ))}
+            {/* <NavigationMenu className="bg-transparent">
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger
+                    className={cn(
+                      "relative items-center hidden lg:flex space-x-1 text-slate-950 text-base font-medium"
+                    )}
+                    aria-label="navigation link"
+                  >
+                    Core Services
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-[#FAFAFA] flex flex-col gap-3 text-base py-4 pr-12 font-medium">
+                    <Link href="/amazon">Amazon Management</Link>
+                    <Link href="/ecommerce">Ecommerce Development</Link>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu> */}
+
+            {navItems.slice(3, 4).map((item, idx) => (
+              <Link
+                href={item.href}
+                key={idx}
+                className={cn(
+                  "relative items-center hidden lg:flex space-x-1 text-slate-950 text-base font-semibold"
+                )}
+                aria-label="navigation link"
+              >
+                {item.title}
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="hidden lg:flex justify-center items-center gap-6 w-[55%]">
-          {navItems.slice(0,3).map((item, idx) => (
-            <Link
-              href={item.href}
-              key={idx}
-              className={cn(
-                "relative items-center hidden lg:flex space-x-1 text-slate-50 text-base"
-              )}
-              aria-label="navigation link"
-            >
-              {item.title}
-            </Link>
-          ))}
-          <NavigationMenu className="bg-transparent">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger
-                  className={cn(
-                    "relative items-center hidden lg:flex space-x-1 text-slate-50 text-base"
-                  )}
-                  aria-label="navigation link"
-                >
-                  Core Services
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-transparent flex flex-col gap-3 text-base py-4 text-slate-50">
-                  <Link href="/amazon">Amazon Management</Link>
-                  <Link href="/ecommerce">Ecommerce Development</Link>
-                  {/* <Link href="/advertising">Advertising</Link> */}
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-
-          {navItems.slice(3,4).map((item, idx) => (
-            <Link
-              href={item.href}
-              key={idx}
-              className={cn(
-                "relative items-center hidden lg:flex space-x-1 text-slate-50 text-base"
-              )}
-              aria-label="navigation link"
-            >
-              {item.title}
-            </Link>
-          ))}
-        </div>
-
-        <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
+        <div className={styles.navbuttonContainer}>
+          <Link
+            href="https://calendly.com/trishane-wizeconsulting/30min"
+            target="_blank"
+          >
+            <Button className={styles.navButton}>Book a consultation</Button>
+          </Link>
           <Link href="/contact">
-            <Button className="font-semibold h-[45px] text-base w-[160px] border-[1px] bg-slate-50 text-black">
-              Get a free audit
-            </Button>
+            <Button className={styles.demoButton}>Get started</Button>
           </Link>
         </div>
       </div>
@@ -119,62 +102,53 @@ const Navbar = () => {
         <input type="checkbox" id="sidebar-active" />
         <label
           htmlFor="sidebar-active"
-          className="open-sidebar-button text-gray-500 flex justify-center items-center rounded-lg border-[1px] border-gray-500 p-2 bg-white"
+          className="open-sidebar-button text-black"
         >
-          <Menu size={20} />
+          <Menu size={25} />
         </label>
         <label id="overlay" htmlFor="sidebar-active"></label>
-        <div className="links-container ">
-          <label
-            htmlFor="sidebar-active"
-            className="close-sidebar-button relative left-80 text-gray-500 mt-9 flex justify-center items-center rounded-lg border-[1px] border-gray-500 p-2 bg-white"
-          >
-            <X size={20} />
-          </label>
-          <div className="flex flex-col gap-2 w-full text-center mt-12">
-            <Link
-              href="/"
-              className="text-black w-full text-base"
-              aria-label="navigation link"
-            >
-              Home
-            </Link>
-            {navItems.map((item, idx) => (
-              <Link
-                href={item.href}
-                className="text-black -mt-4 w-full text-base"
-                key={idx}
+        <div className="links-container">
+          <div className="w-full">
+            <header className="flex justify-between w-full pt-6 px-[20px]">
+              <p className="secondary text-black text-xl font-extrabold">
+                Wize Consulting
+              </p>
+              <label
+                htmlFor="sidebar-active"
+                className="close-sidebar-button relative text-black"
               >
-                {item.title}
+                <X size={22} />
+              </label>
+            </header>
+
+            <div className="flex flex-col w-full mt-6">
+              <Link
+                href="/"
+                className="text-black w-full text-base font-medium"
+                aria-label="navigation link"
+              >
+                Home
               </Link>
-            ))}
-            <Link
-              href="/amazon"
-              className="text-black -mt-4 w-full text-base"
-              aria-label="navigation link"
-            >
-              Amazon
-            </Link>
-            <Link
-              href="/ecommerce"
-              className="text-black -mt-4 w-full text-base"
-              aria-label="navigation link"
-            >
-              Ecommerce
-            </Link>
-            <Link
-              href="/advertising"
-              className="text-black -mt-4 w-full text-base"
-              aria-label="navigation link"
-            >
-              Advertising
-            </Link>
-            <Link href="tel:416-995-4979">
-              <Button className="h-[48px] w-full text-base text-white">
-                Get a free audit today
-              </Button>
-            </Link>
+              {navItems.map((item, idx) => (
+                <Link
+                  href={item.href}
+                  className="text-black text-base font-medium"
+                  key={idx}
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
           </div>
+
+          <Link
+            href="https://calendly.com/trishane-wizeconsulting/30min"
+            target="_blank"
+          >
+            <Button className="rounded-full w-full py-6 text-base self-end">
+              Book your consulation
+            </Button>
+          </Link>
         </div>
       </nav>
     </div>

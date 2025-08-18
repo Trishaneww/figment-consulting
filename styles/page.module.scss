@@ -1,46 +1,46 @@
-.cardContainer{
+.cardContainer {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: sticky;
   top: 0px;
-  .card{
+  .card {
     display: flex;
     flex-direction: column;
     position: relative;
     height: 500px;
     width: 1000px;
     border-radius: 25px;
-    padding:50px;
+    padding: 50px;
     transform-origin: top;
-    h2{
+    h2 {
       text-align: center;
       margin: 0px;
       font-size: 28px;
     }
-    .body{
+    .body {
       display: flex;
       height: 100%;
       margin-top: 50px;
       gap: 50px;
 
-      .description{
+      .description {
         width: 40%;
         position: relative;
         top: 10%;
-        p{
+        p {
           font-size: 16px;
-          &::first-letter{
+          &::first-letter {
             font-size: 28px;
-            font-family: 'Title';
+            font-family: "Title";
           }
         }
-        span{
+        span {
           display: flex;
           align-items: center;
           gap: 5px;
-          a{
+          a {
             font-size: 12px;
             text-decoration: underline;
             cursor: pointer;
@@ -48,17 +48,17 @@
         }
       }
 
-      .imageContainer{
+      .imageContainer {
         position: relative;
         width: 60%;
         height: 100%;
         border-radius: 25px;
         overflow: hidden;
-        .inner{
+        .inner {
           width: 100%;
           height: 100%;
         }
-        img{
+        img {
           object-fit: cover;
         }
       }
@@ -66,10 +66,82 @@
   }
 }
 
-.main{
-
+.main {
   margin-top: 50vh;
 
   margin-bottom: 50vh;
+}
 
+.demoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+
+  gap: 20px;
+  padding: 20px;
+  margin: 0 0 10rem 0;
+  border-radius: 15px;
+  background-color: #e8ecd4;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    width: 74%;
+
+    gap: 80px;
+    padding: 80px;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+
+    gap: 20px;
+
+    .demoTag {
+      font-size: 1rem;
+    }
+
+    .demoHeader {
+      font-family: "Playfair Display", serif;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      font-weight: 600;
+
+      @media (min-width: 1024px) {
+        font-size: 3.4rem;
+        line-height: 3.4rem;
+      }
+    }
+
+    .demoSubheader {
+      font-size: 1rem;
+      width: 90%;
+
+      @media (min-width: 1024px) {
+        font-size: 1.2rem;
+        width: 80%;
+      }
+    }
+
+    .demoButton {
+      max-width: 200px;
+      padding: 15px 20px;
+      border-radius: 100px;
+      border: 1px solid black;
+
+      text-align: center;
+      transition: 200ms;
+
+      &:hover,
+      &:focus {
+      }
+    }
+  }
+  .demoImage {
+    border-radius: 10px;
+  }
 }

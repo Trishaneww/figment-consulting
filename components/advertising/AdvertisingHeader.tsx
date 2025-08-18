@@ -14,24 +14,25 @@ const AdvertisingHeader = () => {
           THE PROBLEM
         </p>
         <p className="font-medium text-3xl lg:text-[2.5rem] secondary">
-          Why your Amazon store may not be <span className="italic">performing</span>
+          Why your Amazon store may not be{" "}
+          <span className="italic">performing</span>
         </p>
         <p className="">
           From launch to scale, we’ve got you covered at every stage.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:w-[68%] text-center mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:w-[74%] text-center mt-12">
         <div className="flex flex-col items-center justify-center gap-2 bg-white rounded-xl px-3 pb-4 h-[300px] border-[1px] shadow-md border-gray-200">
           <div className="h-[50px] w-[50px] flex items-center justify-center border-[1px] border-gray-300 rounded-xl text-red-500">
             <Laptop />
           </div>
-          <p className="font-semibold w-[65%] text-[1.1rem] mt-2">
-            Its slow
-          </p>
+          <p className="font-semibold w-[65%] text-[1.1rem] mt-2">Its slow</p>
           <p className="font-medium">
-            From product listings to PPC, we help you dominate Amazon <span className="text-green-600">with
-            proven strategies that boost visibility, trust, and sales.</span>
+            From product listings to PPC, we help you dominate Amazon{" "}
+            <span className="text-green-600">
+              with proven strategies that boost visibility, trust, and sales.
+            </span>
           </p>
         </div>
 
@@ -43,8 +44,10 @@ const AdvertisingHeader = () => {
             Its not optimized
           </p>
           <p className="font-medium">
-            From product listings to PPC, we help you dominate Amazon <span className="text-green-600">with
-            proven strategies that boost visibility, trust, and sales.</span>
+            From product listings to PPC, we help you dominate Amazon{" "}
+            <span className="text-green-600">
+              with proven strategies that boost visibility, trust, and sales.
+            </span>
           </p>
         </div>
 
@@ -56,8 +59,10 @@ const AdvertisingHeader = () => {
             It doesnt sell
           </p>
           <p className="font-medium">
-            From product listings to PPC, we help you dominate Amazon <span className="text-green-600">with
-            proven strategies that boost visibility, trust, and sales.</span>
+            From product listings to PPC, we help you dominate Amazon{" "}
+            <span className="text-green-600">
+              with proven strategies that boost visibility, trust, and sales.
+            </span>
           </p>
         </div>
 
@@ -69,8 +74,10 @@ const AdvertisingHeader = () => {
             Its invisible
           </p>
           <p className="font-medium">
-            From product listings to PPC, we help you dominate Amazon <span className="text-green-600">with
-            proven strategies that boost visibility, trust, and sales.</span>
+            From product listings to PPC, we help you dominate Amazon{" "}
+            <span className="text-green-600">
+              with proven strategies that boost visibility, trust, and sales.
+            </span>
           </p>
         </div>
       </div>

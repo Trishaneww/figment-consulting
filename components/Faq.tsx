@@ -19,41 +19,36 @@ type OrderedListProps = {
 
 const Faq = ({data} : OrderedListProps) => {
   return (
-    <div className="flex flex-col justify-center items-center scroll-smooth py-14 lg:py-32 px-6 gap-6 w-full bg-gray-100 z-20">
-      <section className="flex flex-col lg:items-center justify-center w-full">
-        <h1 className="text-3xl lg:text-[2.5rem] font-medium lg:text-center secondary">
+    <div className="flex flex-col lg:flex-row justify-center lg:justify-between items-center lg:items-start scroll-smooth py-14 lg:py-32 px-6 gap-6 lg:gap-20 w-full lg:w-[74%]">
+      <section className="flex flex-col lg:items-center justify-center w-full lg:w-[40%]">
+        <h1 className="text-[2.5rem] leading-[2.5rem] lg:text-[3.4rem] lg:leading-[3.4rem] font-medium text-center lg:text-left secondary">
           Questions?<span className="italic"> Answered</span>
         </h1>
         {/* <Button className="h-[45px] w-[140px] rounded-lg text-base shadow-slate-400 shadow-lg mt-8">Email us</Button> */}
       </section>
 
-      <div className="flex flex-col justify-center items-center gap-6 text-slate-950 text-base md:text-lg lg:text-xl rounded-lg w-full">
+      <div className="flex flex-col justify-center items-center gap-6 text-slate-950 text-base md:text-lg lg:text-xl rounded-lg lg:w-[60%]">
         <Accordion
           type="single"
           collapsible
-          className="flex flex-col gap-2 w-full lg:w-[48%]"
+          className="flex flex-col gap-2 w-full"
         >
           {data.map((accordion: any, idx: number) => (
             <AccordionItem
               value={`item-${idx}`}
-              className="py-2 rounded-2xl border-b-[1px] border-gray-300"
+              className="py-2"
               key={idx}
             >
-              <AccordionTrigger className="text-base text-left">
+              <AccordionTrigger className="text-base lg:text-lg text-left font-semibold">
                 {accordion.item}
               </AccordionTrigger>
-              <AccordionContent className="text-base py-2">
+              <AccordionContent className="text-base lg:text-lg py-2">
                 {accordion.content}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
       </div>
-      {/* <div className="flex flex-col gap-2 items-center px-6 lg:px-2 py-8 border-gray-200 border-[1px] rounded-lg text-center w-[92%] lg:w-[46%] bg-white">
-        <p className="font-semibold text-2xl lg:text-4xl">Still have a question?</p>
-        <p className="text-base">Get in touch with us and let's discuss it.</p>
-        <Button className="font-semibold w-[160px] h-[45px] mt-4">Get Started</Button>
-      </div> */}
     </div>
   );
 };

@@ -44,10 +44,7 @@ const caseStudies = [
         title: "Faster website load time",
       },
     ],
-    services: [
-      "Custom Web Development",
-      "Google Ads Management",
-    ],
+    services: ["Custom Web Development", "Google Ads Management"],
     src: "/assets/images/services1.avif",
   },
   {
@@ -67,26 +64,22 @@ const caseStudies = [
         title: "New sales channels launched",
       },
     ],
-    services: [
-      "Custom eCommerce Development",
-      "Conversion Rate Optimization",
-    ],
-    src: "/assets/images/services3.avif",
+    services: ["Custom eCommerce Development", "Conversion Rate Optimization"],
+    src: "/assets/images/service1.png",
   },
 ];
 
 const Projects = () => {
   return (
     <div className="flex flex-col items-center px-6 py-14 lg:py-32 bg-gray-100 w-full z-20">
-      <div className="lg:w-[68%] flex flex-col gap-2 items-start justify-center text-left">
-        <p className="font-semibold tracking-widest text-sm text-gray-500">CASE STUDIES</p>
-        <p className="lg:w-[70%] text-3xl lg:text-[2.5rem] secondary font-medium">
+      <div className="lg:w-[74%] flex flex-col gap-2 items-start justify-center text-left">
+        <p className="lg:w-[70%] text-[2.5rem] leading-[2.5rem] lg:text-[3.4rem] lg:leading-[3.4rem] secondary font-medium">
           See how brands made <span className="italic">impact</span> through our
           collaboration
         </p>
       </div>
 
-      <section className="flex flex-col lg:w-[68%] lg:min-w-[1000px] gap-20 mt-12 w-full">
+      <section className="flex flex-col lg:w-[74%] lg:min-w-[1000px] gap-20 mt-12 w-full">
         {caseStudies.map((casestudy, idx) => (
           <div
             className="flex flex-col lg:flex-row gap-2 rounded-2xl shadow-xl overflow-hidden bg-[#FAFAFA] lg:h-[440px]"
@@ -139,7 +132,10 @@ const Projects = () => {
 
               <div className="flex flex-wrap gap-2 items-center mt-4 pt-4 border-t-[1px] border-gray-200 pb-6 ">
                 {casestudy.services.map((service, idx) => (
-                  <div className="px-4 h-[35px] flex items-center justify-center rounded-full border-[1.4px] border-gray-300" key={idx}>
+                  <div
+                    className="px-4 h-[35px] flex items-center justify-center rounded-full border-[1.4px] border-gray-300"
+                    key={idx}
+                  >
                     <p className="text-sm">{service}</p>
                   </div>
                 ))}

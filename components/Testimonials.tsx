@@ -98,11 +98,11 @@ export default function Testimonials() {
     <div className="flex justify-center w-full text-center px-6 relative bg-[#171717] text-white py-24 lg:py-48 z-20">
       <div className="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-32 lg:w-[72%]">
         <div className="flex lg:flex-col items-center lg:items-start gap-12 lg:gap-2 text-left lg:w-[25%]">
-          <div className="flex flex-col gap-6 text-[#949494]">
-            <p className="tracking-widest font-semibold text-base">
+          <div className="flex flex-col gap-6 text-[#c3c3c3]">
+            <p className="tracking-widest font-semibold text-base lg:text-lg">
               TESTIMONIALS
             </p>
-            <p>
+            <p className="text-lg">
               We deliver data-driven and result-focused deliverables. Hear what
               they say about us.
             </p>
@@ -112,7 +112,7 @@ export default function Testimonials() {
             <div className="flex gap-2">
               <button
                 onClick={prev}
-                className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition border-[1.2px] border-[#949494]"
+                className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition border-[1.4px] border-[#c3c3c3]"
               >
                 <ChevronLeft size={20} />
               </button>
@@ -120,7 +120,7 @@ export default function Testimonials() {
             <div className="flex gap-2">
               <button
                 onClick={next}
-                className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition border-[1.2px] border-[#949494]"
+                className="p-2 bg-black text-white rounded-full hover:bg-gray-800 transition border-[1.4px] border-[#c3c3c3]"
               >
                 <ChevronRight size={20} />
               </button>
@@ -147,25 +147,25 @@ export default function Testimonials() {
             />
 
             <div className="flex flex-col items-start">
-              <p className="secondary">{name}</p>
-              <p className="text-[#949494]">{title}</p>
+              <p className="secondary lg:text-lg">{name}</p>
+              <p className="text-[#c3c3c3] lg:text-lg">{title}</p>
             </div>
           </section>
 
           <ul className="grid grid-cols-3 place-content-between w-full gap-6 lg:w-[60%] lg:min-w-[500px] mt-16 pt-4 border-t-[1px] border-[#949494] lg:border-none">
             <li className="flex flex-col gap-3 items-start">
-              <p className="text-2xl lg:text-4xl font-bold secondary">{stats[0].statistic}</p>
-              <p className="text-[#949494]">{stats[0].title}</p>
+              <p className="text-2xl lg:text-5xl font-bold secondary">{stats[0].statistic}</p>
+              <p className="text-[#c3c3c3] lg:text-lg">{stats[0].title}</p>
             </li>
 
             <li className="flex flex-col gap-3 items-start">
-              <p className="text-2xl lg:text-4xl font-bold secondary">{stats[1].statistic}</p>
-              <p className="text-[#949494]">{stats[1].title}</p>
+              <p className="text-2xl lg:text-5xl font-bold secondary">{stats[1].statistic}</p>
+              <p className="text-[#c3c3c3] lg:text-lg">{stats[1].title}</p>
             </li>
 
             <li className="flex flex-col gap-3 items-start">
-              <p className="text-2xl lg:text-4xl font-bold secondary">{stats[2].statistic}</p>
-              <p className="text-[#949494]">{stats[2].title}</p>
+              <p className="text-2xl lg:text-5xl font-bold secondary">{stats[2].statistic}</p>
+              <p className="text-[#c3c3c3] lg:text-lg">{stats[2].title}</p>
             </li>
           </ul>
         </div>
