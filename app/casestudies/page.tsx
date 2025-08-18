@@ -2,8 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useTransform, useScroll } from "framer-motion";
 import Lenis from "@studio-freight/lenis";
-import Footer3 from "@/components/Footer3";
-import Navbar2 from "@/components/Navbar2";
+import Footer3 from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import React from "react";
 
@@ -91,46 +91,14 @@ const caseStudies = [
 ];
 
 const CaseStudies = () => {
-  const gallery = useRef(null);
-  const [dimension, setDimension] = useState({ width: 0, height: 0 });
-  const { scrollYProgress } = useScroll({
-    target: gallery,
-    offset: ["start end", "end start"],
-  });
-  const { height } = dimension;
-  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, height * 1.25]);
-  const y4 = useTransform(scrollYProgress, [0, 1], [0, height * 3]);
-  // const y5 = useTransform(scrollYProgress, [0, 1], [0, height * 1.6]);
-
-  useEffect(() => {
-    const lenis = new Lenis();
-    const raf = (time: number) => {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    };
-    const resize = () => {
-      setDimension({ width: window.innerWidth, height: window.innerHeight });
-    };
-    window.addEventListener("resize", resize);
-    requestAnimationFrame(raf);
-    resize();
-    return () => {
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
   return (
     <div className="flex flex-col items-center bg-[#FAFAFA]">
-      <Navbar2 />
-      <div className="flex flex-col items-center mb-[94vh] lg:mb-[26rem] bg-[#FAFAFA] z-20 w-full">
+      <Navbar />
+      <div className="flex flex-col items-center bg-[#FAFAFA] z-20 w-full">
         <div className="mt-20"></div>
-        <div className="flex flex-col gap-2 justify-center items-center w-full py-32  px-6">
+        <div className="flex flex-col gap-2 justify-center items-center w-full py-12 lg:py-32  px-6">
           <div className="flex flex-col gap-2 items-center justify-center text-center">
-            <p className="tracking-widest text-gray-500 font-semibold text-sm">
-              CASE STUDIES
-            </p>
-            <p className="font-medium text-3xl lg:text-[2.5rem] secondary lg:w-[60%]">
+            <p className="text-[2.5rem] leading-[2.8rem] lg:text-[3.8rem] lg:leading-[4rem] font-medium secondary lg:w-[60%]">
               See how brands made <span className="italic">impact</span> through
               our collaboration
             </p>
@@ -139,7 +107,7 @@ const CaseStudies = () => {
             </p> */}
           </div>
 
-          <section className="grid grid-cols-1 lg:grid-cols-2 lg:w-[68%] lg:min-w-[1000px] gap-8 mt-12">
+          <section className="grid grid-cols-1 lg:grid-cols-2 lg:w-[66%] lg:min-w-[1000px] gap-8 mt-12">
             {caseStudies.map((casestudy, idx) => (
               <div
                 className="flex flex-col gap-2 rounded-2xl shadow-xl overflow-hidden bg-[#FAFAFA]"

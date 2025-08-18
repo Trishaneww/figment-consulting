@@ -1,5 +1,5 @@
 import BlogPosts from "@/components/BlogPosts";
-import Footer3 from "@/components/Footer3";
+import Footer3 from "@/components/Footer";
 import Navbar2 from "@/components/Navbar2";
 import { Calendar, Instagram } from "lucide-react";
 import Image from "next/image";
@@ -33,9 +33,11 @@ const Article1 = () => {
               className="rounded-full  min-w-[48px] max-w-[48px]  min-h-[48px] max-h-[48px]"
             />
             <div className="flex flex-col gap-1 items-start justify-center">
-              <p className="tracking-wide font-bold text-sm">Written by Trishane Anthony</p>
+              <p className="tracking-wide font-bold text-sm">
+                Written by Trishane Anthony
+              </p>
               <div className="flex gap-2 text-xs items-center">
-                <Instagram size={15}/>
+                <Instagram size={15} />
                 <p>600+ followers</p>
               </div>
             </div>
@@ -44,7 +46,7 @@ const Article1 = () => {
           <section className="flex flex-col gap-1 items-start">
             <p className="font-bold tracking-wide text-sm">UPDATED</p>
             <div className="flex items-center gap-2 text-xs">
-              <Calendar size={15}/>
+              <Calendar size={15} />
               <p>March 6, 2025</p>
             </div>
           </section>
@@ -59,7 +61,7 @@ const Article1 = () => {
             className="hover:scale-110 duration-500 transition-transform h-full w-full z-10"
           />
         </div>
-        <p>Reviewed by Mark Sanadi</p>
+        <p>Reviewed by Justin Neale</p>
       </div>
 
       <BlogPosts />

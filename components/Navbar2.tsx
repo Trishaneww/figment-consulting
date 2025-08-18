@@ -63,7 +63,7 @@ const Navbar2 = () => {
           </Link>
         </div>
 
-        <div className="hidden lg:flex justify-center items-center gap-6 w-[55%]">
+        <div className="hidden lg:flex justify-center items-center gap-6 w-[55%] font-medium">
           {navItems.slice(0,3).map((item, idx) => (
             <Link
               href={item.href}
@@ -81,13 +81,13 @@ const Navbar2 = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger
                   className={cn(
-                    "relative items-center hidden lg:flex space-x-1 text-slate-950 text-base"
+                    "relative items-center hidden lg:flex space-x-1 text-slate-950 text-base font-medium"
                   )}
                   aria-label="navigation link"
                 >
                   Core Services
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-[#FAFAFA] flex flex-col gap-3 text-base py-4 pr-12">
+                <NavigationMenuContent className="bg-[#FAFAFA] flex flex-col gap-3 text-base py-4 pr-12 font-medium">
                   <Link href="/amazon">Amazon Management</Link>
                   <Link href="/ecommerce">Ecommerce Development</Link>
                   {/* <Link href="/advertising">Advertising</Link> */}
@@ -113,7 +113,7 @@ const Navbar2 = () => {
 
         <div className="hidden lg:flex gap-8 items-center lg:w-1/3 justify-end">
           <Link href="/contact">
-            <Button className="font-semibold h-[45px] text-base w-[160px] border-[1px] border-gray-700 bg-slate-950 text-white">
+            <Button className="font-semibold h-[45px] text-base w-[160px] bg-indigo-800 text-white">
               Get a free audit
             </Button>
           </Link>
@@ -124,7 +124,7 @@ const Navbar2 = () => {
         <input type="checkbox" id="sidebar-active" />
         <label
           htmlFor="sidebar-active"
-          className="open-sidebar-button text-gray-500 flex justify-center items-center rounded-lg border-[1px] border-gray-500 p-2 bg-white"
+          className="open-sidebar-button text-gray-400 flex justify-center items-center rounded-lg border-[1px] border-gray-300 p-2 bg-white"
         >
           <Menu size={20} />
         </label>
@@ -136,7 +136,7 @@ const Navbar2 = () => {
           >
             <X size={20} />
           </label>
-          <div className="flex flex-col gap-2 w-full text-center font-semibold mt-12">
+          <div className="flex flex-col gap-2 w-full text-center font-mediium mt-12">
             <Link
               href="/"
               className="text-black w-full text-lg"
@@ -167,16 +167,16 @@ const Navbar2 = () => {
             >
               Ecommerce
             </Link>
-             <Link
+             {/* <Link
               href="/advertising"
               className="text-black -mt-4 w-full text-lg"
               aria-label="navigation link"
             >
               Advertising
-            </Link>
+            </Link> */}
             <Link href="tel:416-995-4979">
-              <Button className="h-[48px] w-full text-base text-white">
-                Call us now
+              <Button className="h-[48px] w-full text-base bg-indigo-800 text-white">
+                Get your free audit today
               </Button>
             </Link>
           </div>

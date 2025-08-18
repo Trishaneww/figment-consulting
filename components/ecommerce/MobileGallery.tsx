@@ -104,7 +104,7 @@ const MobileGallery = () => {
     <div className="relative w-full overflow-hidden h-[200vh] bg-[#FAFAFA]">
       <div className="gap-2 flex justify-center px-2">
         {parallax.map((column, colIndex) => (
-          <div key={colIndex} className={`flex flex-col gap-2 will-change-transform ${colIndex % 2 === 0 ? `-mt-[4000px]` : '-mt-[7000px]'}`} ref={(el) => { imageRefs.current[colIndex][0] = el; }}>
+          <div key={colIndex} className={`flex flex-col gap-2 will-change-transform ${colIndex % 2 === 0 ? `-mt-[4000px]` : '-mt-[8000px]'}`} ref={(el) => { imageRefs.current[colIndex][0] = el; }}>
             {column.map(({ src }, rowIndex) => (
                 <Image src={src} key={rowIndex}
                  alt={`Parallax ${colIndex}-${rowIndex}`} width={1000} height={1000} className="relative rounded-lg shadow-lg overflow-hidden will-change-transform border-[2px] border-gray-200" priority />

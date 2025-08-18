@@ -268,6 +268,7 @@ type BlogSection = {
 
 type BlogPost = {
   title: string;
+  href: string;
   createdOn: string;
   author: string;
   src: string;
@@ -277,8 +278,9 @@ type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     title: "Amazon Keyword Strategies That Convert",
+    href: "amazon-keyword-strategies-that-convert",
     createdOn: "2025-07-01",
-    author: "Trishane Wijeyawickrema",
+    author: "Trishane Anthony",
     src: "/assets/images/services4.webp",
     sections: [
       {
@@ -320,8 +322,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     title: "The Blueprint We Use to Scale Online Stores",
+    href: "The-Blueprint-We-Use-to-Scale-Online-Stores",
     createdOn: "2025-07-01",
-    author: "Trishane Wijeyawickrema",
+    author: "Trishane Anthony",
     src: "/assets/images/services3.avif",
     sections: [
       {
@@ -363,8 +366,9 @@ export const blogPosts: BlogPost[] = [
   },
   {
     title: "How We Use Helium 10 to Win Listings",
+    href: "How-We-Use-Helium-10-to-Win-Listings",
     createdOn: "2025-07-01",
-    author: "Trishane Wijeyawickrema",
+    author: "Trishane Anthony",
     src: "/assets/images/services2.avif",
     sections: [
       {
@@ -406,9 +410,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     title: "Why Most Amazon Stores Waste Ad Spend",
+    href: "Why-Most-Amazon-Stores-Waste-Ad-Spend",
     createdOn: "2025-07-01",
-    author: "Trishane Wijeyawickrema",
-    src: "/assets/images/services4.webp",
+    author: "Trishane Anthony",
+    src: "/assets/images/service1.png",
     sections: [
       {
         header: "The Truth About Amazon Advertising",
@@ -456,9 +461,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     title: "What Your Store Needs Before You Run Ads",
+    href: "What-Your-Store-Needs-Before-You-Run-Ads",
     createdOn: "2025-07-01",
-    author: "Trishane Wijeyawickrema",
-    src: "/assets/images/services4.webp",
+    author: "Trishane Anthony",
+    src: "/assets/images/services5.webp",
     sections: [
       {
         header: "Running Ads Doesn’t Fix a Broken Store",
@@ -513,9 +519,10 @@ export const blogPosts: BlogPost[] = [
   },
   {
     title: "Proven Tactics to Improve Cart Conversions",
+    href: "Proven-Tactics-to-Improve-Cart-Conversions",
     createdOn: "2025-07-01",
-    author: "Trishane Wijeyawickrema",
-    src: "/assets/images/services4.webp",
+    author: "Trishane Anthony",
+    src: "/assets/images/services1.avif",
     sections: [
       {
         header: "Cart Abandonment Is Fixable—If You Know Where to Look",
@@ -597,6 +604,7 @@ export interface CategoryValues {
 
 export interface PricingOption {
   name: string;
+  description: string;
   price: string;
   features: string[];
   values: {
@@ -611,14 +619,16 @@ export interface PricingOption {
 export const pricingOptions: PricingOption[] = [
   {
     name: "Starter",
+    description:
+      "Perfect for new businesses. We help set up your eCommerce store and guide your first steps toward multi-channel growth.",
     price: "$1,500",
     features: [
-      "8 hours of Listing Optimization",
+      "20 hours of Listing Optimization",
       "1 Amazon Ads campaign per month",
-      "5 hours of Custom Store Development",
+      "20 hours of Custom Store Development",
       "Support for 1 eCommerce platform",
       "Basic Conversion Rate Optimization review",
-      "1 Strategy Review Call per month",
+      "Unlimited Strategy Review Calls per month",
       "Shared Account Manager",
     ],
     values: {
@@ -665,15 +675,17 @@ export const pricingOptions: PricingOption[] = [
     },
   },
   {
-    name: "Pro",
+    name: "Premium",
+    description:
+      "We handle optimization and multi-channel integration so you can focus on growing your business.",
     price: "$2,500",
     features: [
-      "15 hours of Listing Optimization",
+      "40 hours of Listing Optimization",
       "3 Amazon Ads campaigns per month",
-      "12 hours of Custom Store Development",
+      "40 hours of Custom Store Development",
       "Support for 2 eCommerce platforms",
       "Full Conversion Rate Optimization service",
-      "2 Strategy Review Calls per month",
+      "Unlimited Strategy Review Calls per month",
       "Dedicated Account Manager",
       "Multi-Channel Integration setup",
       "Google Ads campaign management",
@@ -724,6 +736,8 @@ export const pricingOptions: PricingOption[] = [
   },
   {
     name: "Enterprise",
+    description:
+      "We manage everything — from updates to listings and expansion — so you can focus on customers.",
     price: "Custom",
     features: [
       "Custom hours of Listing Optimization",
@@ -825,4 +839,96 @@ export const processData = [
       "Technical or design support as needed",
     ],
   },
+];
+
+export const wizeConsultingFeatures = [
+  {
+    title: "Custom-Coded eCommerce Stores",
+    value: "Built from scratch for speed, SEO & scale",
+  },
+  {
+    title: "Amazon Store Expertise",
+    value: "Full-service Amazon consulting & ads",
+  },
+  {
+    title: "AI-Driven Product & Keyword Research",
+    value: "Advanced AI tools to find high-opportunity keywords & products",
+  },
+  {
+    title: "Amazon SEO",
+    value: "Back-end optimization, indexing, and copywriting that ranks",
+  },
+  {
+    title: "Profit Margin Consulting",
+    value: "We optimize pricing, reduce costs & maximize ROI per product",
+  },
+  {
+    title: "PPC Campaign Management",
+    value: "Highly targeted Amazon & Google Ads with daily optimization",
+  },
+  {
+    title: "Competitor Analysis",
+    value: "In-depth breakdowns of your top competitors’ weaknesses",
+  },
+  {
+    title: "Shipment & FBA Management",
+    value: "We handle shipments, prep, & FBA compliance for you",
+  },
+  {
+    title: "Multi-Channel Integration",
+    value: "Sync across Amazon, Shopify, Google Shopping & more",
+  },
+  {
+    title: "Conversion Rate Optimization",
+    value: "Every store we build is designed to convert, not just look pretty",
+  },
+  {
+    title: "Account Monitoring & Growth Reviews",
+    value: "Weekly/monthly reporting, KPIs & next-step strategy",
+  },
+  {
+    title: "Hands-On, Personalized Support",
+    value: "Real-time Slack/email access with your team",
+  },
+  // { title: "Flexible Pricing", value: "Transparent plans + custom enterprise tier" },
+];
+
+export const otherAgencyFeatures = [
+  { title: "Custom-Coded eCommerce Stores", value: "Template-based & limited" },
+  {
+    title: "Amazon Store Expertise",
+    value: "Basic product uploads & ad setup",
+  },
+  {
+    title: "AI-Driven Product & Keyword Research",
+    value: "Manual guesswork or generic keyword lists",
+  },
+  { title: "Amazon SEO", value: "Basic descriptions without ranking strategy" },
+  {
+    title: "Profit Margin Consulting",
+    value: "No focus on unit economics or margin strategy",
+  },
+  {
+    title: "PPC Campaign Management",
+    value: "Set-it-and-forget-it campaign setups",
+  },
+  { title: "Competitor Analysis", value: "Minimal surface-level audits" },
+  {
+    title: "Shipment & FBA Management",
+    value: "Leaves logistics up to the client",
+  },
+  { title: "Multi-Channel Integration", value: "Supports one platform only" },
+  {
+    title: "Conversion Rate Optimization",
+    value: "CRO is an upsell—if offered at all",
+  },
+  {
+    title: "Account Monitoring & Growth Reviews",
+    value: "No proactive reporting or updates",
+  },
+  {
+    title: "Hands-On, Personalized Support",
+    value: "Delayed responses through account reps",
+  },
+  // { title: "Flexible Pricing", value: "One-size-fits-all with hidden fees or long-term contracts" },
 ];

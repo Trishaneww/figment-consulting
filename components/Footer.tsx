@@ -2,21 +2,22 @@ import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import "../styles/global.scss";
+import styles from '@/styles/landing.module.scss'
 
-const Footer3 = () => {
+const Footer = () => {
   return (
-    <div className="fixed z-10 bottom-0 left-0 flex flex-col pt-24 pb-12 px-12 overflow-x-hidden items-center bg-[#171717] w-full">
-      <div className="flex flex-col gap-12 lg:gap-2 flex-wrap lg:flex-row justify-between lg:w-[80%] border-b-[1px] border-b-[#a4a4a4] pb-12">
-        <section className="flex flex-col items-start justify-start gap-2  lg:max-w-[380px] text-slate-50">
-          <p className="text-2xl lg:text-4xl mb-2 secondary font-medium">
+    <div className="flex flex-col pt-24 pb-12 px-6 overflow-x-hidden items-center bg-[#FAFAFA] w-full">
+      <div className="flex flex-col gap-12 lg:gap-2 flex-wrap lg:flex-row justify-between lg:w-[80%] border-b-[1px] border-b-[#171717] pb-12">
+        <section className="flex flex-col items-start justify-start gap-2  lg:max-w-[380px] text-[#171717]">
+          <p className="text-3xl lg:text-4xl mb-2 secondary font-medium">
             Lets <span className="italic">scale</span> your online store today
           </p>
-          <p className="text-base text-[#a4a4a4]">
+          <p className="text-base text-[#171717] mb-4">
             Elevate your business with expert insights, tailored strategies, and unwavering support designed
           </p>
           <Link
             href="/contact"
-            className="flex items-center gap-1 text-base text-slate-50 group"
+            className={styles.demoButton}
             aria-label="Link leads to contact page"
           >
             <p>Get Started</p>
@@ -24,12 +25,12 @@ const Footer3 = () => {
           </Link>
         </section>
         <section className="flex flex-col lg:flex-row">
-          <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 text-slate-50 w-full">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-8 text-[#171717] w-full">
             <div className="flex gap-4">
               {/* <p>4</p> */}
               <div className="flex flex-col">
-                <ul className="text-[#a4a4a4] text-base flex flex-col gap-2">
-                  <li className="secondary text-[1.1rem] font-medium text-slate-50">
+                <ul className="text-[#171717] text-base flex flex-col gap-2">
+                  <li className="secondary text-[1.2rem] font-semibold text-[#171717]">
                     Company
                   </li>
                   <li>
@@ -62,8 +63,8 @@ const Footer3 = () => {
 
             <div className="flex gap-4">
               <div className="flex flex-col">
-                <ul className="text-[#a4a4a4] text-base flex flex-col gap-2">
-                  <li className="secondary text-[1.1rem] font-medium text-slate-50">
+                <ul className="text-[#171717] text-base flex flex-col gap-2">
+                  <li className="secondary text-[1.2rem] font-semibold text-[#171717]">
                     Contact
                   </li>
                   <li>
@@ -91,7 +92,7 @@ const Footer3 = () => {
           </div>
         </section>
       </div>
-      <div className="lg:w-[80%] flex gap-2 text-[#a4a4a4] text-sm pt-8">
+      <div className="lg:w-[80%] flex gap-2 text-[#171717] text-sm pt-8">
         <p>@2025 WIZE CONSULTING</p>
         <p>ALL RIGHTS RESERVED</p>
       </div>
@@ -99,4 +100,4 @@ const Footer3 = () => {
   );
 };
 
-export default Footer3;
+export default Footer;

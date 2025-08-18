@@ -1,32 +1,49 @@
 import React from "react";
 import "../../styles/global.scss";
-import { Inbox } from "lucide-react";
+import {
+  AppWindowMac,
+  ArrowBigUp,
+  Barcode,
+  BookCheck,
+  BookCopy,
+  Gauge,
+  Handshake,
+  Inbox,
+  Plane,
+  SearchCheck,
+  ShoppingCart,
+  Smartphone,
+  TabletSmartphone,
+  Truck,
+  Workflow,
+} from "lucide-react";
 import { Airplay, AlarmClock, Aperture, Archive } from "lucide-react";
+import { FaAmazon } from "react-icons/fa";
 
 const categories = [
   {
     title: "Custom Development",
-    icon: Airplay,
+    icon: BookCopy,
   },
   {
     title: "Amazon Optimization",
-    icon: Airplay,
+    icon: FaAmazon,
   },
   {
     title: "AI Keyword Research",
-    icon: Airplay,
+    icon: SearchCheck,
   },
   {
     title: "Fast Load Times",
-    icon: Airplay,
+    icon: Gauge,
   },
   {
     title: "Mobile Design",
-    icon: Airplay,
+    icon: Smartphone,
   },
   {
     title: "Channel Integration",
-    icon: Airplay,
+    icon: Workflow,
   },
   {
     title: "SEO Tools",
@@ -34,35 +51,35 @@ const categories = [
   },
   {
     title: "Conversion Boosting",
-    icon: Airplay,
+    icon: ArrowBigUp,
   },
   {
     title: "Analytics Dashboard",
-    icon: Airplay,
+    icon: AppWindowMac,
   },
   {
     title: "Custom Checkout",
-    icon: Airplay,
+    icon: ShoppingCart,
   },
   {
     title: "UX/UI Design",
-    icon: Airplay,
+    icon: TabletSmartphone,
   },
   {
     title: "Tech Support",
-    icon: Airplay,
+    icon: Handshake,
   },
   {
     title: "Competitor Insights",
-    icon: Airplay,
+    icon: Barcode,
   },
   {
     title: "Inventory Setup",
-    icon: Airplay,
+    icon: Plane,
   },
   {
     title: "FBA Setup",
-    icon: Airplay,
+    icon: Truck,
   },
 ];
 
@@ -76,7 +93,7 @@ const EcommerceFeatures = () => {
         </p>
       </div>
 
-      <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-12 w-full lg:w-[68%]">
+      <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-12 w-full lg:w-[74%]">
         {categories.map((feature, idx) => (
           <div
             className="grid grid-cols-1 place-items-center gap-4 items-center justify-center w-full aspect-square p-4 rounded-xl border-[1px] border-gray-200 bg-white hover:border-gray-300 transition-colors"

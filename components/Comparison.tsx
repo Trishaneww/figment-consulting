@@ -1,4 +1,4 @@
-import { pricing } from "@/data";
+import { otherAgencyFeatures, pricing, wizeConsultingFeatures } from "@/data";
 import { Check, CircleCheck, X } from "lucide-react";
 import React from "react";
 import "../styles/global.scss";
@@ -17,84 +17,55 @@ const Comparison = () => {
         </p>
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-2 w-full lg:w-[68%] bg-white shadow-lg border-[1px] border-gray-200 rounded-xl mt-12 p-5">
-        <section className="w-full h-full lg:1-/2 rounded-xl bg-[#171717] flex flex-col gap-3 px-6 pb-6 pt-12 text-slate-50">
-          <p className="text-lg lg:text-xl font-semibold">Wize Consulting</p>
+      <div className="flex flex-col lg:flex-row gap-4 w-full lg:w-[74%] rounded-xl mt-12 p-5">
+        <section className="w-full h-full lg:1-/2 rounded-xl flex flex-col gap-3 px-3 py-3 pt-6 bg-[#ececec]">
+          <p className="text-lg lg:text-xl font-semibold text-center">
+            Other consulting companies
+          </p>
 
-          <div className="flex items-center gap-2 mt-6">
-            <Check size={18} />
-            <p>Deep focus on Amazon strategy, SEO & ads</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Check size={18} />
-            <p>Work directly with experienced strategists</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Check size={18} />
-            <p>Campaigns optimized for ROI, not spend</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Check size={18} />
-            <p>Slack/email support + direct access</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Check size={18} />
-            <p>Tailored, code-level eCommerce builds</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Check size={18} />
-            <p>Clear, easy-to-understand monthly performance data</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <Check size={18} />
-            <p>Modern tools & automation for smarter scaling</p>
+          <div className="bg-white rounded-xl flex flex-col gap-3 px-3 py-3">
+            {otherAgencyFeatures.map((feature, idx) => (
+              <div className="flex items-start gap-2 first:mt-6" key={idx}>
+                <div className="flex justify-center items-center p-1 bg-red-100 rounded-full text-red-600 mt-1">
+                  <X size={12} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="font-semibold">Other {feature.title}</p>
+                  <p className="-mt-1 font-light">{feature.value}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section className="w-full h-full lg:1-/2 rounded-xl flex flex-col gap-3 px-6 pb-6 pt-12">
-          <p className="text-lg lg:text-xl font-semibold">Other agencies</p>
+        <section className="w-full h-full lg:1-/2 rounded-xl flex flex-col gap-3 px-3 py-3 pt-6 bg-green-800">
+          <p className="text-lg lg:text-xl font-semibold text-center text-white">
+            Wize Consulting
+          </p>
 
-          <div className="flex items-center gap-2 mt-6">
-            <X size={18} />
-            <p>General knowledge, not Amazon-specific</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <X size={18} />
-            <p>Handed off to juniors or outsourced teams</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <X size={18} />
-            <p>Focus on impressions or vanity metrics</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <X size={18} />
-            <p>Slow replies, ticketing systems</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <X size={18} />
-            <p>Template-based, limited flexibility</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <X size={18} />
-            <p>Complicated dashboards with vague insights</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            <X size={18} />
-            <p>Outdated processes and slow implementation</p>
+          <div className="bg-white rounded-xl flex flex-col gap-3 px-3 py-3">
+            {wizeConsultingFeatures.map((feature, idx) => (
+              <div className="flex items-start gap-2 first:mt-6" key={idx}>
+                <div className="flex justify-center items-center p-1 bg-green-100 rounded-full text-green-600 mt-1">
+                  <X size={12} />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="font-semibold">Wize {feature.title}</p>
+                  <p className="-mt-1 font-light">{feature.value}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
+      </div>
+
+      <div className="flex flex-col items-center justify-center gap-2 mt-6">
+        <Button className="text-lg font-semibold px-6 py-6 bg-indigo-800">
+          Get a free audit
+        </Button>
+        <p className="text-sm mt-1">
+          Start your free trial. Cancel in 1 click.
+        </p>
       </div>
     </div>
   );

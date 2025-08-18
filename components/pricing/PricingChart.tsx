@@ -31,9 +31,9 @@ const categories = [
 ];
 const PricingChart = () => {
   return (
-    <div className="flex items-center justify-center gap-2 px-6 z-20 bg-[#FAFAFA] w-full pb-14 lg:pb-32">
-      <div className="flex flex-col gap-2 lg:w-[68%] lg:pl-6">
-        <div className="overflow-x-auto">
+    <div className="hidden lg:flex items-center justify-center gap-2 px-6 z-20 bg-[#FAFAFA] w-full pb-14 lg:pb-32">
+      <div className="flex flex-col gap-2 w-full lg:w-[74%] lg:pl-6">
+        <div className="overflow-x-scroll">
           <div className="flex flex-col gap-10">
             <div className="lg:-mb-8">
               <div className="flex items-center gap-2 mb-4 p-4 rounded-t-xl">
@@ -63,12 +63,10 @@ const PricingChart = () => {
               const subItems = section ? Object.keys(section) : [];
 
               return (
-                <div className="" key={idx}>
+                <div className="overflow-scroll w-full" key={idx}>
                   <div className="flex items-center gap-2 mb-4 p-4 bg-gray-100 rounded-t-xl">
                     {/* <category.icon size={18}/> */}
-                    <p className="font-semibold text-base">
-                      {category.title}
-                    </p>
+                    <p className="font-semibold text-base">{category.title}</p>
                   </div>
 
                   {subItems.map((subItem, index) => (

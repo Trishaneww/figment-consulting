@@ -1,7 +1,25 @@
 import React from "react";
 import "../../styles/global.scss";
-import { Inbox } from "lucide-react";
-import { Airplay, AlarmClock, Aperture, Archive } from "lucide-react";
+import {
+  AlignJustify,
+  AppWindowMac,
+  BadgeDollarSign,
+  Barcode,
+  ChartLine,
+  ChartPie,
+  CircleCheck,
+  Container,
+  Image,
+  KeyRound,
+  Lightbulb,
+  Package2,
+  Plane,
+  Rocket,
+  SearchCheck,
+  Truck,
+  Airplay,
+} from "lucide-react";
+import { MdOutlineCampaign, MdOutlineInventory } from "react-icons/md";
 
 const categories = [
   {
@@ -10,79 +28,79 @@ const categories = [
   },
   {
     title: "Amazon SEO",
-    icon: Airplay,
+    icon: SearchCheck,
   },
   {
     title: "Amazon FBA Setup",
-    icon: Airplay,
+    icon: Plane,
   },
   {
     title: "Product Research",
-    icon: Airplay,
+    icon: Rocket,
   },
   {
     title: "AI Keyword Discovery",
-    icon: Airplay,
+    icon: KeyRound,
   },
   {
     title: "PPC Campaigns",
-    icon: Airplay,
+    icon: MdOutlineCampaign,
   },
   {
-    title: "SEO Tools",
-    icon: Airplay,
+    title: "Fullfilled by Merchant",
+    icon: Truck,
   },
   {
     title: "A+ Content Creation",
-    icon: Airplay,
+    icon: Image,
   },
   {
     title: "Storefront Design",
-    icon: Airplay,
+    icon: AppWindowMac,
   },
   {
     title: "Competitor Analysis",
-    icon: Airplay,
+    icon: Barcode,
   },
   {
     title: "Brand Registry Support",
-    icon: Airplay,
+    icon: CircleCheck,
   },
   {
     title: "Category Optimization",
-    icon: Airplay,
+    icon: AlignJustify,
   },
   {
     title: "Inventory Planning",
-    icon: Airplay,
+    icon: MdOutlineInventory,
   },
   {
     title: "Buy Box Strategy",
-    icon: Airplay,
+    icon: Package2,
   },
   {
     title: "Ad Spend Optimization",
-    icon: Airplay,
+    icon: ChartLine,
   },
   {
     title: "Profit Margin Analysis",
-    icon: Airplay,
+    icon: ChartPie,
   },
   {
     title: "Fulfillment Strategy",
-    icon: Airplay,
+    icon: Lightbulb,
   },
   {
     title: "Ongoing Account Support",
     icon: Airplay,
   },
-    {
+  {
     title: "AI Market Research",
-    icon: Airplay,
+    icon: BadgeDollarSign,
   },
   {
     title: "Shipping Management",
-    icon: Airplay,
+    icon: Container,
   },
 ];
 
@@ -96,7 +114,7 @@ const AmazonFeatures = () => {
         </p>
       </div>
 
-      <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-12 w-full lg:w-[68%]">
+      <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 mt-12 w-full lg:w-[74%]">
         {categories.map((feature, idx) => (
           <div
             className="grid grid-cols-1 place-items-center gap-4 items-center justify-center w-full aspect-square p-4 rounded-xl border-[1px] border-gray-200 bg-white hover:border-gray-300 transition-colors"
